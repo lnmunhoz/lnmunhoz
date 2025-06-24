@@ -1,4 +1,6 @@
-## Hi there 👋
+## Hey there, this is Lucas!
+
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@lnmunhoz/95d85165-37c4-4f15-bf26-710995fac8ea.png" /></a>
 
 <!--
 **lnmunhoz/lnmunhoz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
