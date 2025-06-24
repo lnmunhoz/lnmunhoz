@@ -1,8 +1,8 @@
 ## Hey there, this is Lucas!
 
-- Mostly I of my time is spent working on 2 businesses that I build with my best friends.
-- With the time that I have left, I try work on a couple of personal ideas, hopefully I can get some of them out now on this new era with AI coding assistants it becoming much easier to build things and validate fast.
-- Oh, and I have to remind myself to go outdoors, exercise, make new friends, all that jazz, is very important!
+- Most of my time is spent working on 2 businesses that I built with my best friends.
+- With the time that I have left, I try to work on a couple of personal ideas. Hopefully I can get some of them out now in this new era with AI coding assistants—it's becoming much easier to build things and validate fast.
+- Oh, and I have to remind myself to go outdoors, exercise, make new friends, all that jazz—it's very important!
 - Anyway, I hope you are having a nice day, thanks for visiting my profile :)
 
 *These are the languages I've been messing around for the past 30 days.*
