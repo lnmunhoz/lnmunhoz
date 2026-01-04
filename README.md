@@ -5,5 +5,3 @@
 - Oh, and I have to remind myself to go outdoors, exercise, make new friends, all that jazz is very important!
 - Anyway, I hope you are having a nice day, thanks for visiting my profile :)
 
-<a href="https://wakatime.com"><img src="https://wakatime.com/share/@lnmunhoz/fb2fcb12-2d9a-43c9-b6fa-d3a316796d42.png" /></a>
-
