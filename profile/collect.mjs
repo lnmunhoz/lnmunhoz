@@ -19,7 +19,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'data', 'stats.json');
 // Languages that are build output or markup noise rather than code I write.
 // Public repos left out of the "Lately in public" list.
-const HIDDEN_PUBLIC_REPOS = ['skills', 'macros-dashboard-site'];
+const HIDDEN_PUBLIC_REPOS = ['skills', 'macros-dashboard-site', 'disgit'];
 const IGNORED_LANGUAGES = ['Dockerfile', 'Makefile', 'Procfile', 'Batchfile', 'PowerShell', 'Jupyter Notebook'];
 
 const graphql = createClient(resolveToken());

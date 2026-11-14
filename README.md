@@ -30,7 +30,7 @@ I'm building productivity and language learning tools from Bangkok. Most of them
 - [**pgcop**](https://github.com/lnmunhoz/pgcop) <sub>TypeScript · Aug 2026</sub>
 - [**mongocop**](https://github.com/lnmunhoz/mongocop) · Interactive CLI tool for copying MongoDB databases. <sub>TypeScript · Jul 2026</sub>
 - [**npm-scripts-auto**](https://github.com/lnmunhoz/npm-scripts-auto) · Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases. <sub>Shell · Jun 2026</sub>
-- [**disgit**](https://github.com/lnmunhoz/disgit) <sub>TypeScript · Apr 2026</sub>
+- [**pi-vercel-deployments**](https://github.com/lnmunhoz/pi-vercel-deployments) · Pi extension for Vercel deployment status, inspection, and cancellation. <sub>TypeScript · Apr 2026</sub>
 <!-- public:end -->
 
 ### Find me

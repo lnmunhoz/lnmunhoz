@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T07:19:33.761Z",
+  "generatedAt": "2026-11-14T07:21:23.420Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -343,11 +343,11 @@
         "language": "Shell"
       },
       {
-        "name": "disgit",
-        "description": null,
-        "url": "https://github.com/lnmunhoz/disgit",
+        "name": "pi-vercel-deployments",
+        "description": "Pi extension for Vercel deployment status, inspection, and cancellation.",
+        "url": "https://github.com/lnmunhoz/pi-vercel-deployments",
         "stars": 0,
-        "pushedAt": "2026-04-10T05:15:23Z",
+        "pushedAt": "2026-04-03T07:45:35Z",
         "language": "TypeScript"
       }
     ],
@@ -373,7 +373,7 @@
     ]
   },
   "activity": {
-    "since": "2025-11-14T07:19:20.674Z",
+    "since": "2025-11-14T07:21:02.784Z",
     "commits": 2106,
     "repos": 45,
     "privateRepos": 32,
