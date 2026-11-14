@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="270" viewBox="0 0 840 270" role="img" aria-labelledby="t d">
 <title id="t">What I write, and my years on GitHub</title>
-<desc id="d">Languages: TypeScript 57%, Python 17%, JavaScript 7%, Shell 7%, Swift 5%, HTML 3%, Other 5%. Contributions per year: 2013: 1, 2014: 111, 2015: 349, 2016: 1357, 2017: 1429, 2018: 1025, 2019: 1315, 2020: 751, 2021: 670, 2022: 458, 2023: 881, 2024: 494, 2025: 1206, 2026: 2777.</desc>
+<desc id="d">Languages: TypeScript 57%, Python 17%, JavaScript 7%, Shell 7%, Swift 5%, HTML 3%, Other 5%. Contributions per year: 2013: 1, 2014: 111, 2015: 349, 2016: 1357, 2017: 1429, 2018: 1025, 2019: 1315, 2020: 751, 2021: 670, 2022: 458, 2023: 881, 2024: 494, 2025: 1206, 2026: 2780.</desc>
 <style>text{font-variant-numeric:tabular-nums}</style>
 <rect x="0.5" y="0.5" width="839" height="269" rx="12" fill="#151b23" stroke="#3d444d"/>
 <text x="24" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#f0f6fc" text-anchor="start">What I write</text><text x="24" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9198a1" text-anchor="start">Language mix of my commits, past 12 months</text>
@@ -11,8 +11,8 @@
 <rect x="122" y="100.6" width="69.9" height="14" rx="3" fill="#3987e5"/>
 <text x="199.9" y="110.6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f0f6fc" text-anchor="start">17%</text>
 <text x="112" y="133.1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9198a1" text-anchor="end">JavaScript</text>
-<rect x="122" y="123.1" width="28.2" height="14" rx="3" fill="#3987e5"/>
-<text x="158.2" y="133.1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f0f6fc" text-anchor="start">7%</text>
+<rect x="122" y="123.1" width="28.4" height="14" rx="3" fill="#3987e5"/>
+<text x="158.4" y="133.1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f0f6fc" text-anchor="start">7%</text>
 <text x="112" y="155.7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9198a1" text-anchor="end">Shell</text>
 <rect x="122" y="145.7" width="26.3" height="14" rx="3" fill="#3987e5"/>
 <text x="156.3" y="155.7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f0f6fc" text-anchor="start">7%</text>
@@ -26,25 +26,25 @@
 <rect x="122" y="213.4" width="19.6" height="14" rx="3" fill="#656c76"/>
 <text x="149.6" y="223.4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#f0f6fc" text-anchor="start">5%</text>
 <rect x="420" y="30" width="1" height="210" fill="#262c36"/>
-<text x="448" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#f0f6fc" text-anchor="start">13 years on GitHub</text><text x="448" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9198a1" text-anchor="start">Contributions per year, 12,824 in total</text>
+<text x="448" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#f0f6fc" text-anchor="start">13 years on GitHub</text><text x="448" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9198a1" text-anchor="start">Contributions per year, 12,827 in total</text>
 <path d="M451 232V232Q451 231.9 451.1 231.9H471.2Q471.3 231.9 471.3 232V232Z" fill="#3987e5"/>
 <text x="461.1" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’13</text>
 <path d="M477.3 232V229.4Q477.3 226.4 480.3 226.4H494.6Q497.6 226.4 497.6 229.4V232Z" fill="#3987e5"/>
 <text x="487.4" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’14</text>
 <path d="M503.6 232V217.4Q503.6 214.4 506.6 214.4H520.9Q523.9 214.4 523.9 217.4V232Z" fill="#3987e5"/>
 <text x="513.7" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’15</text>
-<path d="M529.9 232V166.6Q529.9 163.6 532.9 163.6H547.1Q550.1 163.6 550.1 166.6V232Z" fill="#3987e5"/>
+<path d="M529.9 232V166.7Q529.9 163.7 532.9 163.7H547.1Q550.1 163.7 550.1 166.7V232Z" fill="#3987e5"/>
 <text x="540" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’16</text>
 <path d="M556.1 232V163Q556.1 160 559.1 160H573.4Q576.4 160 576.4 163V232Z" fill="#3987e5"/>
 <text x="566.3" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’17</text>
 <text x="566.3" y="153" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#f0f6fc" text-anchor="middle">1,429</text>
-<path d="M582.4 232V183.3Q582.4 180.3 585.4 180.3H599.7Q602.7 180.3 602.7 183.3V232Z" fill="#3987e5"/>
+<path d="M582.4 232V183.4Q582.4 180.4 585.4 180.4H599.7Q602.7 180.4 602.7 183.4V232Z" fill="#3987e5"/>
 <text x="592.6" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’18</text>
-<path d="M608.7 232V168.7Q608.7 165.7 611.7 165.7H626Q629 165.7 629 168.7V232Z" fill="#3987e5"/>
+<path d="M608.7 232V168.8Q608.7 165.8 611.7 165.8H626Q629 165.8 629 168.8V232Z" fill="#3987e5"/>
 <text x="618.9" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’19</text>
-<path d="M635 232V197.1Q635 194.1 638 194.1H652.3Q655.3 194.1 655.3 197.1V232Z" fill="#3987e5"/>
+<path d="M635 232V197.2Q635 194.2 638 194.2H652.3Q655.3 194.2 655.3 197.2V232Z" fill="#3987e5"/>
 <text x="645.1" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’20</text>
-<path d="M661.3 232V201.2Q661.3 198.2 664.3 198.2H678.6Q681.6 198.2 681.6 201.2V232Z" fill="#3987e5"/>
+<path d="M661.3 232V201.3Q661.3 198.3 664.3 198.3H678.6Q681.6 198.3 681.6 201.3V232Z" fill="#3987e5"/>
 <text x="671.4" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’21</text>
 <path d="M687.6 232V211.9Q687.6 208.9 690.6 208.9H704.9Q707.9 208.9 707.9 211.9V232Z" fill="#3987e5"/>
 <text x="697.7" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’22</text>
@@ -52,10 +52,10 @@
 <text x="724" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’23</text>
 <path d="M740.1 232V210.1Q740.1 207.1 743.1 207.1H757.4Q760.4 207.1 760.4 210.1V232Z" fill="#3987e5"/>
 <text x="750.3" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’24</text>
-<path d="M766.4 232V174.2Q766.4 171.2 769.4 171.2H783.7Q786.7 171.2 786.7 174.2V232Z" fill="#3987e5"/>
+<path d="M766.4 232V174.3Q766.4 171.3 769.4 171.3H783.7Q786.7 171.3 786.7 174.3V232Z" fill="#3987e5"/>
 <text x="776.6" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’25</text>
 <path d="M792.7 232V95Q792.7 92 795.7 92H810Q813 92 813 95V232Z" fill="#d95926"/>
 <text x="802.9" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="middle">’26</text>
-<text x="802.9" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#f0f6fc" text-anchor="end" dx="10.1">2,777</text>
+<text x="802.9" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#f0f6fc" text-anchor="end" dx="10.1">2,780</text>
 <rect x="448" y="232" width="368" height="1" fill="#3d444d"/>
 </svg>

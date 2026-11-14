@@ -16,8 +16,8 @@
 <path d="M150 200V113.7Q150 110.7 153 110.7H163.7Q166.7 110.7 166.7 113.7V200Z" fill="#2a78d6"/>
 <path d="M170.7 200V99Q170.7 96 173.7 96H184.3Q187.3 96 187.3 99V200Z" fill="#eb6834"/>
 <text x="179" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">noon</text>
-<path d="M191.3 200V122.4Q191.3 119.4 194.3 119.4H205Q208 119.4 208 122.4V200Z" fill="#2a78d6"/>
-<path d="M212 200V110Q212 107 215 107H225.7Q228.7 107 228.7 110V200Z" fill="#2a78d6"/>
+<path d="M191.3 200V121.4Q191.3 118.4 194.3 118.4H205Q208 118.4 208 121.4V200Z" fill="#2a78d6"/>
+<path d="M212 200V109.5Q212 106.5 215 106.5H225.7Q228.7 106.5 228.7 109.5V200Z" fill="#2a78d6"/>
 <path d="M232.7 200V139.3Q232.7 136.3 235.7 136.3H246.3Q249.3 136.3 249.3 139.3V200Z" fill="#2a78d6"/>
 <path d="M253.3 200V143.9Q253.3 140.9 256.3 140.9H267Q270 140.9 270 143.9V200Z" fill="#2a78d6"/>
 <path d="M274 200V163.6Q274 160.6 277 160.6H287.7Q290.7 160.6 290.7 163.6V200Z" fill="#2a78d6"/>
@@ -37,19 +37,19 @@
 <rect x="24" y="200" width="496" height="1" fill="#c4ccd4"/>
 <rect x="548" y="30" width="1" height="190" fill="#e3e8ed"/>
 <text x="572" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#59636e" text-anchor="start">Busiest day: Saturday</text>
-<path d="M577 200V111.2Q577 108.2 580 108.2H598.9Q601.9 108.2 601.9 111.2V200Z" fill="#2a78d6"/>
+<path d="M577 200V112Q577 109 580 109H598.9Q601.9 109 601.9 112V200Z" fill="#2a78d6"/>
 <text x="589.4" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Mon</text>
-<path d="M611.9 200V117.1Q611.9 114.1 614.9 114.1H633.7Q636.7 114.1 636.7 117.1V200Z" fill="#2a78d6"/>
+<path d="M611.9 200V117.8Q611.9 114.8 614.9 114.8H633.7Q636.7 114.8 636.7 117.8V200Z" fill="#2a78d6"/>
 <text x="624.3" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Tue</text>
-<path d="M646.7 200V115.6Q646.7 112.6 649.7 112.6H668.6Q671.6 112.6 671.6 115.6V200Z" fill="#2a78d6"/>
+<path d="M646.7 200V116.3Q646.7 113.3 649.7 113.3H668.6Q671.6 113.3 671.6 116.3V200Z" fill="#2a78d6"/>
 <text x="659.1" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Wed</text>
-<path d="M681.6 200V111.5Q681.6 108.5 684.6 108.5H703.4Q706.4 108.5 706.4 111.5V200Z" fill="#2a78d6"/>
+<path d="M681.6 200V112.3Q681.6 109.3 684.6 109.3H703.4Q706.4 109.3 706.4 112.3V200Z" fill="#2a78d6"/>
 <text x="694" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Thu</text>
-<path d="M716.4 200V108.6Q716.4 105.6 719.4 105.6H738.3Q741.3 105.6 741.3 108.6V200Z" fill="#2a78d6"/>
+<path d="M716.4 200V109.4Q716.4 106.4 719.4 106.4H738.3Q741.3 106.4 741.3 109.4V200Z" fill="#2a78d6"/>
 <text x="728.9" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Fri</text>
 <path d="M751.3 200V99Q751.3 96 754.3 96H773.1Q776.1 96 776.1 99V200Z" fill="#eb6834"/>
 <text x="763.7" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Sat</text>
-<path d="M786.1 200V147.6Q786.1 144.6 789.1 144.6H808Q811 144.6 811 147.6V200Z" fill="#2a78d6"/>
+<path d="M786.1 200V148.1Q786.1 145.1 789.1 145.1H808Q811 145.1 811 148.1V200Z" fill="#2a78d6"/>
 <text x="798.6" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Sun</text>
 <rect x="572" y="200" width="244" height="1" fill="#c4ccd4"/>
 </svg>
