@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Lucas N. Munhoz, building productivity tools and passion projects in Bangkok. A city skyline where each building is one week of my GitHub activity over the past year." src="assets/hero-light.svg" width="100%">
+  <img alt="Lucas N. Munhoz, building productivity and language learning tools in Bangkok. A city skyline where each building is one week of my GitHub activity over the past year." src="assets/hero-light.svg" width="100%">
 </picture>
 
 ### Olá mundo, this is Lucas!
 
-I build productivity tools and passion projects from Bangkok. Most of them start as something I need myself: to stay focused, to learn Thai, to get a bit better every day.
+I'm building productivity and language learning tools from Bangkok. Most of them start as something I need myself: to stay focused, to learn Thai, to get a bit better every day.
 
 ### What I'm building
 
