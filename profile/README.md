@@ -5,7 +5,7 @@ A GitHub Action ([profile.yml](../.github/workflows/profile.yml)) rebuilds the c
 1. **[collect.mjs](collect.mjs)** asks the GitHub GraphQL API for my activity and saves it to [data/stats.json](../data/stats.json):
    - the contribution calendar for every year since I joined (it already counts private work as totals),
    - my commits on the default branch of every repo I pushed to in the past year, private and organisation repos included: only when each commit was written,
-   - the language mix of those repos, weighted by how many commits I made in each,
+   - the language mix of those repos, weighted by how many commits I made in each (collected but not shown right now),
    - my public repos, for the "Lately in public" list (minus the ones in `HIDDEN_PUBLIC_REPOS` in collect.mjs).
 2. **[render.mjs](render.mjs)** draws each card (the header's Bangkok scenes, temples, lanterns, river and tuk-tuk, live in [bangkok.mjs](bangkok.mjs) and are switched on in `HERO`) as a light and a dark SVG in [assets/](../assets), and refreshes the generated parts of the README (between the `<!-- name:start -->` and `<!-- name:end -->` markers). Everything else in the README is hand-written.
 
@@ -17,7 +17,7 @@ Private repositories only ever leave the API as totals. No private repo name, fi
 
 ## The token
 
-The commit and language cards need to read my private repos, which the Actions `GITHUB_TOKEN` cannot. They use the `PROFILE_TOKEN` repository secret: a classic personal access token with the `repo` scope (it also covers organisation repos I contribute to). A fine-grained token with read-only **Contents** and **Metadata** on all my repositories works too, but it only sees repos I own.
+The commit numbers need to read my private repos, which the Actions `GITHUB_TOKEN` cannot. They use the `PROFILE_TOKEN` repository secret: a classic personal access token with the `repo` scope (it also covers organisation repos I contribute to). A fine-grained token with read-only **Contents** and **Metadata** on all my repositories works too, but it only sees repos I own.
 
 Without `PROFILE_TOKEN` the job still refreshes the public parts and keeps the last saved commit totals.
 

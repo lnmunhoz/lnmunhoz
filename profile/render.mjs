@@ -5,7 +5,6 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { peakIndex, rhythmLabel } from './stats.mjs';
 import { THEMES } from './theme.mjs';
 import { SCENES, SCENE_CLASSES } from './bangkok.mjs';
 
@@ -229,128 +228,6 @@ function numbers(stats, t) {
   });
 }
 
-// ── When I commit: hour of day and day of week ──────────────────────────────
-function rhythm(stats, t) {
-  const a = stats.activity;
-  if (!a?.hours) return null;
-  const H = 250;
-  const parts = [];
-  const total = a.hours.reduce((s, v) => s + v, 0);
-  const peak = peakIndex(a.hours);
-  const lateHours = [22, 23, 0, 1, 2, 3, 4];
-  const late = lateHours.reduce((s, h) => s + a.hours[h], 0) / total;
-  const label = rhythmLabel(a.hours);
-  const hourName = (h) => (h === 0 ? 'midnight' : h === 12 ? 'noon' : h < 12 ? `${h} am` : `${h - 12} pm`);
-
-  parts.push(heading(24, 34, `When I commit: mostly ${label.name}`, `Commits by hour, Bangkok time, past 12 months. The peak hour starts at ${hourName(peak)}.`, t));
-
-  // Hours, starting at 5 am so the night stays in one piece on the right.
-  const order = Array.from({ length: 24 }, (_, i) => (i + 5) % 24);
-  const left = 24;
-  const right = 520;
-  const top = 96;
-  const base = 200;
-  const pitch = (right - left) / 24;
-  const bw = pitch - 4;
-  const max = Math.max(...a.hours, 1);
-  const lateStart = left + order.indexOf(22) * pitch - 2;
-  parts.push(`<rect x="${r1(lateStart)}" y="${top - 22}" width="${r1(right - lateStart + 2)}" height="${base - top + 22}" rx="6" fill="${t.band}"/>`);
-  parts.push(text(right - 6, top - 8, `${pct(late)} after 10 pm`, { size: 11.5, weight: 600, fill: t.text2, anchor: 'end' }));
-  order.forEach((h, i) => {
-    const x = left + i * pitch + 2;
-    const v = a.hours[h];
-    const hgt = (v / max) * (base - top);
-    parts.push(bar(x, base - hgt, bw, hgt, h === peak ? t.orange : t.blue));
-    if ([6, 12, 18, 0].includes(h)) parts.push(text(x + bw / 2, base + 17, hourName(h), { size: 11, fill: t.muted, anchor: 'middle' }));
-  });
-  parts.push(`<rect x="${left}" y="${base}" width="${right - left}" height="1" fill="${t.axis}"/>`);
-
-  // Weekdays
-  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-  const full = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  const busiest = peakIndex(a.weekdays);
-  const wl = 572;
-  const wr = W - 24;
-  parts.push(`<rect x="548" y="30" width="1" height="${H - 60}" fill="${t.grid}"/>`);
-  parts.push(text(wl, 86, `Busiest day: ${full[busiest]}`, { size: 12, weight: 600, fill: t.text2 }));
-  const wp = (wr - wl) / 7;
-  const wbw = wp - 10;
-  const wmax = Math.max(...a.weekdays, 1);
-  a.weekdays.forEach((v, i) => {
-    const x = wl + i * wp + 5;
-    const hgt = (v / wmax) * (base - top);
-    parts.push(bar(x, base - hgt, wbw, hgt, i === busiest ? t.orange : t.blue));
-    parts.push(text(x + wbw / 2, base + 17, days[i], { size: 11, fill: t.muted, anchor: 'middle' }));
-  });
-  parts.push(`<rect x="${wl}" y="${base}" width="${wr - wl}" height="1" fill="${t.axis}"/>`);
-
-  return svg({
-    height: H,
-    t,
-    title: 'When I commit',
-    desc: `Commits by hour of day (Bangkok time) and by weekday over the past 12 months. Peak hour starts at ${hourName(peak)}; ${pct(late)} of commits land between 10 pm and 5 am; the busiest day is ${full[busiest]}.`,
-    body: parts.join('\n'),
-  });
-}
-
-// ── Languages and the years on GitHub ───────────────────────────────────────
-function craft(stats, t) {
-  const H = 270;
-  const parts = [];
-  const langs = stats.activity?.languages || [];
-  const base = 232;
-
-  if (langs.length) {
-    parts.push(heading(24, 34, 'What I write', 'Language mix of my commits, past 12 months', t));
-    const nameX = 112;
-    const barX = 122;
-    const barMax = 230;
-    const rowH = (base - 74) / langs.length;
-    const max = langs[0].share;
-    langs.forEach((l, i) => {
-      const y = 76 + i * rowH;
-      const w = Math.max(2, (l.share / max) * barMax);
-      parts.push(text(nameX, y + 12, l.name, { size: 12, fill: t.text2, anchor: 'end' }));
-      parts.push(`<rect x="${barX}" y="${r1(y + 2)}" width="${r1(w)}" height="${r1(Math.min(14, rowH - 6))}" rx="3" fill="${l.name === 'Other' ? t.other : t.blue}"/>`);
-      parts.push(text(barX + w + 8, y + 12, pct(l.share), { size: 12, fill: t.text, weight: 600 }));
-    });
-  }
-
-  // years
-  const thisYear = new Date(stats.generatedAt).getUTCFullYear();
-  const years = stats.years;
-  const left = 448;
-  const right = W - 24;
-  const top = 92;
-  parts.push(`<rect x="420" y="30" width="1" height="${H - 60}" fill="${t.grid}"/>`);
-  parts.push(heading(left, 34, `${thisYear - years[0].year} years on GitHub`, `Contributions per year, ${fmt(stats.lifetime.total)} in total`, t));
-  const pitch = (right - left) / years.length;
-  const bw = pitch - 6;
-  const max = Math.max(...years.map((y) => y.total), 1);
-  const prevBest = years.filter((y) => y.year < thisYear).reduce((b, y) => (!b || y.total > b.total ? y : b), null);
-  years.forEach((y, i) => {
-    const x = left + i * pitch + 3;
-    const h = (y.total / max) * (base - top);
-    const now = y.year === thisYear;
-    parts.push(bar(x, base - h, bw, h, now ? t.orange : t.blue));
-    parts.push(text(x + bw / 2, base + 16, `’${String(y.year).slice(2)}`, { size: 10.5, fill: t.muted, anchor: 'middle' }));
-    if (now || (prevBest && y.year === prevBest.year)) {
-      parts.push(text(x + bw / 2, base - h - 7, fmt(y.total), { size: 11, weight: 600, fill: t.text, anchor: now ? 'end' : 'middle', extra: now ? ` dx="${r1(bw / 2)}"` : '' }));
-    }
-  });
-  parts.push(`<rect x="${left}" y="${base}" width="${right - left}" height="1" fill="${t.axis}"/>`);
-
-  return svg({
-    height: H,
-    t,
-    title: 'What I write, and my years on GitHub',
-    desc:
-      (langs.length ? `Languages: ${langs.map((l) => `${l.name} ${pct(l.share)}`).join(', ')}. ` : '') +
-      `Contributions per year: ${years.map((y) => `${y.year}: ${y.total}`).join(', ')}.`,
-    body: parts.join('\n'),
-  });
-}
-
 // ── README blocks ───────────────────────────────────────────────────────────
 function picture(name, alt) {
   return `<picture>
@@ -378,7 +255,7 @@ function replaceBlock(readme, name, content) {
 async function main() {
   const stats = JSON.parse(await readFile(join(ROOT, 'data', 'stats.json'), 'utf8'));
   await mkdir(join(ROOT, 'assets'), { recursive: true });
-  const cards = { hero, numbers, rhythm, craft };
+  const cards = { hero, numbers };
   const written = [];
   for (const [name, draw] of Object.entries(cards)) {
     for (const [mode, theme] of Object.entries(THEMES)) {

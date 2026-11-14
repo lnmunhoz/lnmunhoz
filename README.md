@@ -19,16 +19,6 @@ I'm building productivity and language learning tools from Bangkok. Most of them
   <img alt="My GitHub numbers for the past year: contributions, current streak, commits and repos, and contributions since I joined." src="assets/numbers-light.svg" width="100%">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rhythm-dark.svg">
-  <img alt="Bar charts of when I commit: by hour of the day in Bangkok time, and by day of the week." src="assets/rhythm-light.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/craft-dark.svg">
-  <img alt="The languages I committed in over the past year, and my contributions per year since 2013." src="assets/craft-light.svg" width="100%">
-</picture>
-
 <!-- updated:start -->
 <sub>Last updated 14 Nov 2026</sub>
 <!-- updated:end -->
