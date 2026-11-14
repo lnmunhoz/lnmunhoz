@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300" role="img" aria-labelledby="t d">
 <title id="t">Commits per month, split by AI co-author</title>
-<desc id="d">Dec: 0 commits, 0 with an AI co-author; Jan: 36 commits, 4 with an AI co-author; Feb: 240 commits, 32 with an AI co-author; Mar: 154 commits, 59 with an AI co-author; Apr: 161 commits, 0 with an AI co-author; May: 99 commits, 0 with an AI co-author; Jun: 107 commits, 4 with an AI co-author; Jul: 189 commits, 14 with an AI co-author; Aug: 123 commits, 0 with an AI co-author; Sep: 20 commits, 0 with an AI co-author; Oct: 199 commits, 60 with an AI co-author; Nov: 756 commits, 498 with an AI co-author</desc>
+<desc id="d">Dec: 0 commits, 0 with an AI co-author; Jan: 36 commits, 4 with an AI co-author; Feb: 240 commits, 32 with an AI co-author; Mar: 154 commits, 59 with an AI co-author; Apr: 161 commits, 0 with an AI co-author; May: 99 commits, 0 with an AI co-author; Jun: 107 commits, 4 with an AI co-author; Jul: 189 commits, 14 with an AI co-author; Aug: 123 commits, 0 with an AI co-author; Sep: 20 commits, 0 with an AI co-author; Oct: 199 commits, 60 with an AI co-author; Nov: 760 commits, 501 with an AI co-author</desc>
 <style>text{font-variant-numeric:tabular-nums}</style>
 <rect x="0.5" y="0.5" width="839" height="299" rx="12" fill="#f6f8fa" stroke="#d1d9e0"/>
 <text x="24" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2328" text-anchor="start">Commits per month, and how many I wrote with an AI agent</text><text x="24" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636e" text-anchor="start">My commits on the default branch of 45 repos, private ones included. AI counted from Co-Authored-By trailers, so it is a lower bound.</text>
@@ -43,11 +43,11 @@
 <path d="M704 239.2V217.2Q704 214.2 707 214.2H735Q738 214.2 738 217.2V239.2Z" fill="#2a78d6"/>
 <rect x="704" y="241.2" width="34" height="10.8" fill="#eb6834"/>
 <text x="721" y="269" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Oct</text>
-<path d="M767.3 160.4V116.9Q767.3 113.9 770.3 113.9H798.3Q801.3 113.9 801.3 116.9V160.4Z" fill="#2a78d6"/>
-<rect x="767.3" y="162.4" width="34" height="89.6" fill="#eb6834"/>
+<path d="M767.3 159.8V116.2Q767.3 113.2 770.3 113.2H798.3Q801.3 113.2 801.3 116.2V159.8Z" fill="#2a78d6"/>
+<rect x="767.3" y="161.8" width="34" height="90.2" fill="#eb6834"/>
 <text x="784.3" y="269" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Nov</text>
 <text x="784.3" y="283" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6e7781" text-anchor="middle">so far</text>
-<text x="759.3" y="127.9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328" text-anchor="end">756 commits</text>
-<text x="759.3" y="143.9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636e" text-anchor="end">66% with AI</text>
+<text x="759.3" y="127.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2328" text-anchor="end">760 commits</text>
+<text x="759.3" y="143.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636e" text-anchor="end">66% with AI</text>
 <rect x="56" y="252" width="760" height="1" fill="#c4ccd4"/>
 </svg>
