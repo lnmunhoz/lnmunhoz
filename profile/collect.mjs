@@ -6,18 +6,20 @@
 // last saved private totals are kept as they were.
 //
 // Privacy: private repositories only ever appear here as totals. No private
-// repo name, message or path is written to the output file.
+// repo name or path is written to the output file, and commit messages are never read.
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createClient, resolveToken } from './github.mjs';
-import { busiestDay, isAiPaired, languageMix, localParts, streaks, TIME_ZONE, weeklyTotals } from './stats.mjs';
+import { busiestDay, languageMix, localParts, streaks, TIME_ZONE, weeklyTotals } from './stats.mjs';
 
 const LOGIN = process.env.PROFILE_LOGIN || 'lnmunhoz';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'data', 'stats.json');
 // Languages that are build output or markup noise rather than code I write.
+// Public repos left out of the "Lately in public" list.
+const HIDDEN_PUBLIC_REPOS = ['skills', 'macros-dashboard-site'];
 const IGNORED_LANGUAGES = ['Dockerfile', 'Makefile', 'Procfile', 'Batchfile', 'PowerShell', 'Jupyter Notebook'];
 
 const graphql = createClient(resolveToken());
@@ -130,7 +132,7 @@ async function fetchPublicRepos() {
     after = page.pageInfo.hasNextPage ? page.pageInfo.endCursor : null;
   } while (after);
 
-  const skip = new Set([LOGIN.toLowerCase()]);
+  const skip = new Set([LOGIN, ...HIDDEN_PUBLIC_REPOS].map((n) => n.toLowerCase()));
   return {
     repos: repos.length,
     stars: repos.reduce((s, r) => s + r.stargazerCount, 0),
@@ -149,34 +151,19 @@ async function fetchPublicRepos() {
 // private and organisation repos included, reduced to totals.
 async function fetchActivity(userId) {
   const since = new Date(Date.now() - 365 * 864e5).toISOString();
-  const recentSince = Date.now() - 90 * 864e5;
   const hours = Array(24).fill(0);
   const weekdays = Array(7).fill(0);
-  const months = new Map();
   const repoTotals = [];
   let commits = 0;
-  let aiPaired = 0;
-  let recentCommits = 0;
-  let recentAiPaired = 0;
 
   const historyFields = `history(first: 100, since: $since, author: { id: $uid }, after: $cursor) {
-    totalCount pageInfo { hasNextPage endCursor } nodes { authoredDate message } }`;
+    totalCount pageInfo { hasNextPage endCursor } nodes { authoredDate } }`;
 
   const count = (node) => {
     const { hour, weekday } = localParts(node.authoredDate);
     hours[hour] += 1;
     weekdays[weekday] += 1;
-    const paired = isAiPaired(node.message);
-    const month = months.get(node.authoredDate.slice(0, 7)) || { commits: 0, aiPaired: 0 };
-    month.commits += 1;
-    if (paired) month.aiPaired += 1;
-    months.set(node.authoredDate.slice(0, 7), month);
     commits += 1;
-    if (paired) aiPaired += 1;
-    if (Date.parse(node.authoredDate) >= recentSince) {
-      recentCommits += 1;
-      if (paired) recentAiPaired += 1;
-    }
   };
 
   let after = null;
@@ -229,11 +216,8 @@ async function fetchActivity(userId) {
     commits,
     repos: repoTotals.length,
     privateRepos: repoTotals.filter((r) => r.private).length,
-    aiPaired,
-    recent: { days: 90, commits: recentCommits, aiPaired: recentAiPaired },
     hours,
     weekdays,
-    months: [...months.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([month, m]) => ({ month, ...m })),
     languages: languageMix(repoTotals, { top: 6, ignore: IGNORED_LANGUAGES }),
   };
 }

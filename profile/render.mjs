@@ -176,16 +176,12 @@ function numbers(stats, t) {
       note: streak > 0 && streak >= longest ? 'my longest ever' : `longest: ${longest} days`,
     },
   ];
-  if (a) {
-    tiles.push({ value: fmt(a.commits), label: `commits in ${a.repos} repos`, note: `${a.privateRepos} of them private` });
-    if (a.recent?.commits) {
-      tiles.push({
-        value: pct(a.recent.aiPaired / a.recent.commits),
-        label: 'co-written with AI',
-        note: `past ${a.recent.days} days (${pct(a.aiPaired / a.commits)} all year)`,
-      });
-    }
-  }
+  if (a) tiles.push({ value: fmt(a.commits), label: `commits in ${a.repos} repos`, note: `${a.privateRepos} of them private` });
+  tiles.push({
+    value: fmt(stats.lifetime.total),
+    label: `contributions since ${new Date(stats.joined).getUTCFullYear()}`,
+    note: `on ${fmt(stats.lifetime.activeDays)} different days`,
+  });
   const tw = (W - 48) / tiles.length;
   const body = tiles
     .map((tile, i) => {
@@ -206,75 +202,6 @@ function numbers(stats, t) {
     desc: tiles.map((tile) => `${tile.value} ${tile.label} (${tile.note})`).join('. '),
     body,
   });
-}
-
-// ── Commits per month, split by AI co-author ────────────────────────────────
-function pairing(stats, t) {
-  const a = stats.activity;
-  if (!a?.months?.length) return null;
-  const H = 300;
-  // the last 12 calendar months, empty ones included
-  const end = new Date(stats.generatedAt);
-  const months = [];
-  for (let k = 11; k >= 0; k -= 1) {
-    const d = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() - k, 1));
-    const key = d.toISOString().slice(0, 7);
-    const m = a.months.find((x) => x.month === key) || { commits: 0, aiPaired: 0 };
-    months.push({ key, label: MONTHS[d.getUTCMonth()], ...m });
-  }
-  const parts = [heading(24, 34, 'Commits per month, and how many I wrote with an AI agent', `My commits on the default branch of ${a.repos} repos, private ones included. AI counted from Co-Authored-By trailers, so it is a lower bound.`, t)];
-  // legend
-  const lx = 24;
-  const ly = 80;
-  parts.push(`<rect x="${lx}" y="${ly - 9}" width="10" height="10" rx="2" fill="${t.orange}"/>`);
-  parts.push(text(lx + 16, ly, 'with an AI co-author', { size: 12, fill: t.text2 }));
-  parts.push(`<rect x="${lx + 152}" y="${ly - 9}" width="10" height="10" rx="2" fill="${t.blue}"/>`);
-  parts.push(text(lx + 168, ly, 'on my own', { size: 12, fill: t.text2 }));
-
-  const top = 108;
-  const base = 252;
-  const left = 56;
-  const right = W - 24;
-  const max = Math.max(...months.map((m) => m.commits), 1);
-  const step = niceStep(max / 4);
-  const yMax = Math.ceil(max / step) * step;
-  const y = (v) => base - (v / yMax) * (base - top);
-  for (let v = step; v <= yMax; v += step) {
-    parts.push(`<rect x="${left}" y="${r1(y(v))}" width="${right - left}" height="1" fill="${t.grid}"/>`);
-    parts.push(text(left - 8, y(v) + 4, fmt(v), { size: 11, fill: t.muted, anchor: 'end' }));
-  }
-  const pitch = (right - left) / months.length;
-  const bw = Math.min(34, pitch * 0.58);
-  months.forEach((m, i) => {
-    const cx = left + pitch * (i + 0.5);
-    const x = cx - bw / 2;
-    const aiH = (m.aiPaired / yMax) * (base - top);
-    const soloH = ((m.commits - m.aiPaired) / yMax) * (base - top);
-    const gap = aiH > 0 && soloH > 0 ? 2 : 0;
-    if (soloH > 0) parts.push(bar(x, base - aiH - gap - soloH, bw, soloH, t.blue));
-    if (aiH > 0) parts.push(soloH > 0 ? `<rect x="${r1(x)}" y="${r1(base - aiH)}" width="${r1(bw)}" height="${r1(aiH)}" fill="${t.orange}"/>` : bar(x, base - aiH, bw, aiH, t.orange));
-    parts.push(text(cx, base + 17, m.label, { size: 11, fill: t.muted, anchor: 'middle' }));
-    if (i === months.length - 1) {
-      parts.push(text(cx, base + 31, 'so far', { size: 10.5, fill: t.muted, anchor: 'middle' }));
-      if (m.commits) {
-        parts.push(text(cx - bw / 2 - 8, y(m.commits) + 12, `${fmt(m.commits)} commits`, { size: 12, weight: 600, fill: t.text, anchor: 'end' }));
-        parts.push(text(cx - bw / 2 - 8, y(m.commits) + 28, `${pct(m.aiPaired / m.commits)} with AI`, { size: 12, fill: t.text2, anchor: 'end' }));
-      }
-    }
-  });
-  parts.push(`<rect x="${left}" y="${base}" width="${right - left}" height="1" fill="${t.axis}"/>`);
-  return svg({
-    height: H,
-    t,
-    title: 'Commits per month, split by AI co-author',
-    desc: months.map((m) => `${m.label}: ${m.commits} commits, ${m.aiPaired} with an AI co-author`).join('; '),
-    body: parts.join('\n'),
-  });
-}
-
-function niceStep(raw) {
-  const p = 10 ** Math.floor(Math.log10(Math.max(raw, 1)));
-  return [1, 2, 2.5, 5, 10].map((m) => m * p).find((s) => s >= raw) || 10 * p;
 }
 
 // ── When I commit: hour of day and day of week ──────────────────────────────
@@ -426,7 +353,7 @@ function replaceBlock(readme, name, content) {
 async function main() {
   const stats = JSON.parse(await readFile(join(ROOT, 'data', 'stats.json'), 'utf8'));
   await mkdir(join(ROOT, 'assets'), { recursive: true });
-  const cards = { hero, numbers, pairing, rhythm, craft };
+  const cards = { hero, numbers, rhythm, craft };
   const written = [];
   for (const [name, draw] of Object.entries(cards)) {
     for (const [mode, theme] of Object.entries(THEMES)) {
@@ -441,7 +368,7 @@ async function main() {
   let readme = await readFile(readmePath, 'utf8').catch(() => '');
   readme = replaceBlock(readme, 'public', publicBlock(stats));
   const d = new Date(stats.generatedAt);
-  readme = replaceBlock(readme, 'updated', `<sub>Updated ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()} by a GitHub Action. Private repos count only as totals: no names, no code.</sub>`);
+  readme = replaceBlock(readme, 'updated', `<sub>Last updated ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}</sub>`);
   await writeFile(readmePath, readme);
   console.log(`Rendered ${written.length} cards: ${written.join(', ')}`);
 }

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { busiestDay, isAiPaired, languageMix, localParts, rhythmLabel, streaks, weeklyTotals } from '../profile/stats.mjs';
+import { busiestDay, languageMix, localParts, rhythmLabel, streaks, weeklyTotals } from '../profile/stats.mjs';
 
 const days = (counts, start = '2026-01-01') =>
   counts.map((count, i) => ({ date: new Date(Date.parse(start) + i * 864e5).toISOString().slice(0, 10), count }));
@@ -25,13 +25,6 @@ test('weeklyTotals sums each run of seven days', () => {
 
 test('busiestDay picks the highest count', () => {
   assert.equal(busiestDay(days([1, 9, 3])).count, 9);
-});
-
-test('isAiPaired reads Co-Authored-By trailers only', () => {
-  assert.ok(isAiPaired('Fix it\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'));
-  assert.ok(isAiPaired('Fix\n\nco-authored-by: Codex <codex@openai.com>'));
-  assert.ok(!isAiPaired('Ask Claude about the bug'));
-  assert.ok(!isAiPaired('Pair\n\nCo-Authored-By: Maria <maria@example.com>'));
 });
 
 test('localParts uses Bangkok time', () => {

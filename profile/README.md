@@ -4,16 +4,16 @@ A GitHub Action ([profile.yml](../.github/workflows/profile.yml)) rebuilds the c
 
 1. **[collect.mjs](collect.mjs)** asks the GitHub GraphQL API for my activity and saves it to [data/stats.json](../data/stats.json):
    - the contribution calendar for every year since I joined (it already counts private work as totals),
-   - my commits on the default branch of every repo I pushed to in the past year, private and organisation repos included: when each commit was written, and whether it credits an AI co-author (a `Co-Authored-By:` trailer naming Claude, Codex, Copilot, Cursor and similar),
+   - my commits on the default branch of every repo I pushed to in the past year, private and organisation repos included: only when each commit was written,
    - the language mix of those repos, weighted by how many commits I made in each,
-   - my public repos, for the "Lately in public" list.
+   - my public repos, for the "Lately in public" list (minus the ones in `HIDDEN_PUBLIC_REPOS` in collect.mjs).
 2. **[render.mjs](render.mjs)** draws each card as a light and a dark SVG in [assets/](../assets), and refreshes the generated parts of the README (between the `<!-- name:start -->` and `<!-- name:end -->` markers). Everything else in the README is hand-written.
 
 No dependencies: plain Node 22.
 
 ## Privacy
 
-Private repositories only ever leave the API as totals. No private repo name, commit message, file or path is written to `stats.json` or the cards. Commit messages are read only to look for the AI co-author trailer.
+Private repositories only ever leave the API as totals. No private repo name, file or path is written to `stats.json` or the cards, and commit messages are never read.
 
 ## The token
 

@@ -3,13 +3,6 @@
 
 export const TIME_ZONE = 'Asia/Bangkok';
 
-const AI_TRAILER = /^co-authored-by:.*\b(claude|anthropic|codex|openai|chatgpt|copilot|cursor|gemini|devin|aider)\b/im;
-
-/** True when a commit message credits an AI coding assistant as co-author. */
-export function isAiPaired(message) {
-  return AI_TRAILER.test(message || '');
-}
-
 /** Hour (0-23) and weekday (0 = Monday … 6 = Sunday) of an ISO time in the given zone. */
 export function localParts(iso, timeZone = TIME_ZONE) {
   const parts = new Intl.DateTimeFormat('en-US', {

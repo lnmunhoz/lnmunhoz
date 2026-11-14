@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T06:35:27.170Z",
+  "generatedAt": "2026-11-14T06:45:23.972Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,11 +60,11 @@
     },
     {
       "year": 2026,
-      "total": 2770
+      "total": 2773
     }
   ],
   "lifetime": {
-    "total": 12817,
+    "total": 12820,
     "activeDays": 1924,
     "longestStreak": {
       "length": 26,
@@ -77,7 +77,7 @@
     }
   },
   "lastYear": {
-    "total": 2770,
+    "total": 2773,
     "activeDays": 214,
     "streak": {
       "current": 26,
@@ -302,7 +302,7 @@
       },
       {
         "start": "2026-11-08",
-        "count": 679
+        "count": 682
       }
     ]
   },
@@ -310,14 +310,6 @@
     "repos": 54,
     "stars": 175,
     "recent": [
-      {
-        "name": "macros-dashboard-site",
-        "description": "Static build for macros.lnmunhoz.dev (aggregates only)",
-        "url": "https://github.com/lnmunhoz/macros-dashboard-site",
-        "stars": 0,
-        "pushedAt": "2026-11-09T09:25:07Z",
-        "language": "HTML"
-      },
       {
         "name": "agent-ready-repo",
         "description": "A project template that coding agents can find their way around: feature folders, specs, a changelog, a task list and checks that keep them current.",
@@ -343,12 +335,20 @@
         "language": "TypeScript"
       },
       {
-        "name": "skills",
-        "description": "My skills directory",
-        "url": "https://github.com/lnmunhoz/skills",
+        "name": "npm-scripts-auto",
+        "description": "Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases.",
+        "url": "https://github.com/lnmunhoz/npm-scripts-auto",
+        "stars": 1,
+        "pushedAt": "2026-06-15T03:12:29Z",
+        "language": "Shell"
+      },
+      {
+        "name": "disgit",
+        "description": null,
+        "url": "https://github.com/lnmunhoz/disgit",
         "stars": 0,
-        "pushedAt": "2026-06-25T04:43:22Z",
-        "language": null
+        "pushedAt": "2026-04-10T05:15:23Z",
+        "language": "TypeScript"
       }
     ],
     "mostStarred": [
@@ -373,16 +373,10 @@
     ]
   },
   "activity": {
-    "since": "2025-11-14T06:35:09.800Z",
-    "commits": 2088,
+    "since": "2025-11-14T06:45:05.250Z",
+    "commits": 2091,
     "repos": 45,
     "privateRepos": 32,
-    "aiPaired": 674,
-    "recent": {
-      "days": 90,
-      "commits": 997,
-      "aiPaired": 561
-    },
     "hours": [
       132,
       45,
@@ -397,7 +391,7 @@
       81,
       195,
       227,
-      169,
+      172,
       203,
       139,
       129,
@@ -415,94 +409,37 @@
       300,
       314,
       324,
-      350,
+      353,
       190
-    ],
-    "months": [
-      {
-        "month": "2026-01",
-        "commits": 36,
-        "aiPaired": 4
-      },
-      {
-        "month": "2026-02",
-        "commits": 240,
-        "aiPaired": 32
-      },
-      {
-        "month": "2026-03",
-        "commits": 154,
-        "aiPaired": 59
-      },
-      {
-        "month": "2026-04",
-        "commits": 161,
-        "aiPaired": 0
-      },
-      {
-        "month": "2026-05",
-        "commits": 99,
-        "aiPaired": 0
-      },
-      {
-        "month": "2026-06",
-        "commits": 107,
-        "aiPaired": 4
-      },
-      {
-        "month": "2026-07",
-        "commits": 189,
-        "aiPaired": 14
-      },
-      {
-        "month": "2026-08",
-        "commits": 123,
-        "aiPaired": 0
-      },
-      {
-        "month": "2026-09",
-        "commits": 20,
-        "aiPaired": 0
-      },
-      {
-        "month": "2026-10",
-        "commits": 199,
-        "aiPaired": 60
-      },
-      {
-        "month": "2026-11",
-        "commits": 760,
-        "aiPaired": 501
-      }
     ],
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5694034264956561
+        "share": 0.5693301967465333
       },
       {
         "name": "Python",
-        "share": 0.173413369306939
+        "share": 0.17320507456195527
       },
       {
         "name": "JavaScript",
-        "share": 0.06796330392228297
+        "share": 0.06820849520230009
       },
       {
         "name": "Shell",
-        "share": 0.06513319094133355
+        "share": 0.06513816061795688
       },
       {
         "name": "Swift",
-        "share": 0.046147516982840225
+        "share": 0.04616491368449997
       },
       {
         "name": "HTML",
-        "share": 0.029519440243198695
+        "share": 0.029518911874988705
       },
       {
         "name": "Other",
-        "share": 0.04841975210774937
+        "share": 0.04843424731176589
       }
     ]
   }
