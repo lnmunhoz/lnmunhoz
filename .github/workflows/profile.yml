@@ -1,0 +1,46 @@
+name: Profile cards
+
+on:
+  schedule:
+    - cron: '23 */6 * * *' # every six hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['profile/**', '.github/workflows/profile.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Collect activity
+        run: node profile/collect.mjs
+        env:
+          # PROFILE_TOKEN reads private repos as totals; without it only public data refreshes.
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Draw cards
+        run: node profile/render.mjs
+      - name: Commit changes
+        run: |
+          git add data assets README.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh profile cards'
+          git push

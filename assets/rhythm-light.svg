@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="250" viewBox="0 0 840 250" role="img" aria-labelledby="t d">
+<title id="t">When I commit</title>
+<desc id="d">Commits by hour of day (Bangkok time) and by weekday over the past 12 months. Peak hour starts at noon; 21% of commits land between 10 pm and 5 am; the busiest day is Saturday.</desc>
+<style>text{font-variant-numeric:tabular-nums}</style>
+<rect x="0.5" y="0.5" width="839" height="249" rx="12" fill="#f6f8fa" stroke="#d1d9e0"/>
+<text x="24" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2328" text-anchor="start">When I commit: mostly afternoons</text><text x="24" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636e" text-anchor="start">Commits by hour, Bangkok time, past 12 months. The peak hour starts at noon.</text>
+<rect x="373.3" y="74" width="148.7" height="126" rx="6" fill="#eceff3"/>
+<text x="514" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#59636e" text-anchor="end">21% after 10 pm</text>
+<path d="M26 200V200Q26 199.5 26.5 199.5H42.2Q42.7 199.5 42.7 200V200Z" fill="#2a78d6"/>
+<path d="M46.7 200V195.2Q46.7 192.2 49.7 192.2H60.3Q63.3 192.2 63.3 195.2V200Z" fill="#2a78d6"/>
+<text x="55" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">6 am</text>
+<path d="M67.3 200V192.9Q67.3 189.9 70.3 189.9H81Q84 189.9 84 192.9V200Z" fill="#2a78d6"/>
+<path d="M88 200V188.3Q88 185.3 91 185.3H101.7Q104.7 185.3 104.7 188.3V200Z" fill="#2a78d6"/>
+<path d="M108.7 200V188.8Q108.7 185.8 111.7 185.8H122.3Q125.3 185.8 125.3 188.8V200Z" fill="#2a78d6"/>
+<path d="M129.3 200V165.9Q129.3 162.9 132.3 162.9H143Q146 162.9 146 165.9V200Z" fill="#2a78d6"/>
+<path d="M150 200V113.7Q150 110.7 153 110.7H163.7Q166.7 110.7 166.7 113.7V200Z" fill="#2a78d6"/>
+<path d="M170.7 200V99Q170.7 96 173.7 96H184.3Q187.3 96 187.3 99V200Z" fill="#eb6834"/>
+<text x="179" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">noon</text>
+<path d="M191.3 200V127.4Q191.3 124.4 194.3 124.4H205Q208 124.4 208 127.4V200Z" fill="#2a78d6"/>
+<path d="M212 200V110Q212 107 215 107H225.7Q228.7 107 228.7 110V200Z" fill="#2a78d6"/>
+<path d="M232.7 200V139.3Q232.7 136.3 235.7 136.3H246.3Q249.3 136.3 249.3 139.3V200Z" fill="#2a78d6"/>
+<path d="M253.3 200V143.9Q253.3 140.9 256.3 140.9H267Q270 140.9 270 143.9V200Z" fill="#2a78d6"/>
+<path d="M274 200V163.6Q274 160.6 277 160.6H287.7Q290.7 160.6 290.7 163.6V200Z" fill="#2a78d6"/>
+<path d="M294.7 200V161.8Q294.7 158.8 297.7 158.8H308.3Q311.3 158.8 311.3 161.8V200Z" fill="#2a78d6"/>
+<text x="303" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">6 pm</text>
+<path d="M315.3 200V168.6Q315.3 165.6 318.3 165.6H329Q332 165.6 332 168.6V200Z" fill="#2a78d6"/>
+<path d="M336 200V165.4Q336 162.4 339 162.4H349.7Q352.7 162.4 352.7 165.4V200Z" fill="#2a78d6"/>
+<path d="M356.7 200V169.1Q356.7 166.1 359.7 166.1H370.3Q373.3 166.1 373.3 169.1V200Z" fill="#2a78d6"/>
+<path d="M377.3 200V143.4Q377.3 140.4 380.3 140.4H391Q394 140.4 394 143.4V200Z" fill="#2a78d6"/>
+<path d="M398 200V154.4Q398 151.4 401 151.4H411.7Q414.7 151.4 414.7 154.4V200Z" fill="#2a78d6"/>
+<path d="M418.7 200V142.5Q418.7 139.5 421.7 139.5H432.3Q435.3 139.5 435.3 142.5V200Z" fill="#2a78d6"/>
+<text x="427" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">midnight</text>
+<path d="M439.3 200V182.4Q439.3 179.4 442.3 179.4H453Q456 179.4 456 182.4V200Z" fill="#2a78d6"/>
+<path d="M460 200V194.8Q460 191.8 463 191.8H473.7Q476.7 191.8 476.7 194.8V200Z" fill="#2a78d6"/>
+<path d="M480.7 200V200Q480.7 198.6 482 198.6H496Q497.3 198.6 497.3 200V200Z" fill="#2a78d6"/>
+<path d="M501.3 200V200Q501.3 199.5 501.8 199.5H517.5Q518 199.5 518 200V200Z" fill="#2a78d6"/>
+<rect x="24" y="200" width="496" height="1" fill="#c4ccd4"/>
+<rect x="548" y="30" width="1" height="190" fill="#e3e8ed"/>
+<text x="572" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#59636e" text-anchor="start">Busiest day: Saturday</text>
+<path d="M577 200V108.3Q577 105.3 580 105.3H598.9Q601.9 105.3 601.9 108.3V200Z" fill="#2a78d6"/>
+<text x="589.4" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Mon</text>
+<path d="M611.9 200V114.3Q611.9 111.3 614.9 111.3H633.7Q636.7 111.3 636.7 114.3V200Z" fill="#2a78d6"/>
+<text x="624.3" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Tue</text>
+<path d="M646.7 200V112.8Q646.7 109.8 649.7 109.8H668.6Q671.6 109.8 671.6 112.8V200Z" fill="#2a78d6"/>
+<text x="659.1" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Wed</text>
+<path d="M681.6 200V108.6Q681.6 105.6 684.6 105.6H703.4Q706.4 105.6 706.4 108.6V200Z" fill="#2a78d6"/>
+<text x="694" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Thu</text>
+<path d="M716.4 200V105.6Q716.4 102.6 719.4 102.6H738.3Q741.3 102.6 741.3 105.6V200Z" fill="#2a78d6"/>
+<text x="728.9" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Fri</text>
+<path d="M751.3 200V99Q751.3 96 754.3 96H773.1Q776.1 96 776.1 99V200Z" fill="#eb6834"/>
+<text x="763.7" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Sat</text>
+<path d="M786.1 200V145.9Q786.1 142.9 789.1 142.9H808Q811 142.9 811 145.9V200Z" fill="#2a78d6"/>
+<text x="798.6" y="217" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#6e7781" text-anchor="middle">Sun</text>
+<rect x="572" y="200" width="244" height="1" fill="#c4ccd4"/>
+</svg>

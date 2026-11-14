@@ -1,0 +1,13 @@
+{
+  "name": "lnmunhoz-profile",
+  "private": true,
+  "type": "module",
+  "description": "Builds the cards on github.com/lnmunhoz from my GitHub activity.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "collect": "node profile/collect.mjs",
+    "render": "node profile/render.mjs",
+    "build": "node profile/collect.mjs && node profile/render.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "generatedAt": "2026-11-14T06:12:23.138Z",
+  "timeZone": "Asia/Bangkok",
+  "login": "lnmunhoz",
+  "name": "Lucas N. Munhoz",
+  "joined": "2013-05-08T12:51:58Z",
+  "followers": 187,
+  "years": [
+    {
+      "year": 2013,
+      "total": 1
+    },
+    {
+      "year": 2014,
+      "total": 111
+    },
+    {
+      "year": 2015,
+      "total": 349
+    },
+    {
+      "year": 2016,
+      "total": 1357
+    },
+    {
+      "year": 2017,
+      "total": 1429
+    },
+    {
+      "year": 2018,
+      "total": 1025
+    },
+    {
+      "year": 2019,
+      "total": 1315
+    },
+    {
+      "year": 2020,
+      "total": 751
+    },
+    {
+      "year": 2021,
+      "total": 670
+    },
+    {
+      "year": 2022,
+      "total": 458
+    },
+    {
+      "year": 2023,
+      "total": 881
+    },
+    {
+      "year": 2024,
+      "total": 494
+    },
+    {
+      "year": 2025,
+      "total": 1206
+    },
+    {
+      "year": 2026,
+      "total": 2766
+    }
+  ],
+  "lifetime": {
+    "total": 12813,
+    "activeDays": 1924,
+    "longestStreak": {
+      "length": 26,
+      "start": "2026-10-20",
+      "end": "2026-11-14"
+    },
+    "busiestDay": {
+      "date": "2026-11-13",
+      "count": 221
+    }
+  },
+  "lastYear": {
+    "total": 2766,
+    "activeDays": 214,
+    "streak": {
+      "current": 26,
+      "longest": {
+        "length": 26,
+        "start": "2026-10-20",
+        "end": "2026-11-14"
+      }
+    },
+    "busiestDay": {
+      "date": "2026-11-13",
+      "count": 221
+    },
+    "weeks": [
+      {
+        "start": "2025-11-09",
+        "count": 0
+      },
+      {
+        "start": "2025-11-16",
+        "count": 0
+      },
+      {
+        "start": "2025-11-23",
+        "count": 0
+      },
+      {
+        "start": "2025-11-30",
+        "count": 0
+      },
+      {
+        "start": "2025-12-07",
+        "count": 0
+      },
+      {
+        "start": "2025-12-14",
+        "count": 0
+      },
+      {
+        "start": "2025-12-21",
+        "count": 0
+      },
+      {
+        "start": "2025-12-28",
+        "count": 0
+      },
+      {
+        "start": "2026-01-04",
+        "count": 1
+      },
+      {
+        "start": "2026-01-11",
+        "count": 5
+      },
+      {
+        "start": "2026-01-18",
+        "count": 28
+      },
+      {
+        "start": "2026-01-25",
+        "count": 5
+      },
+      {
+        "start": "2026-02-01",
+        "count": 50
+      },
+      {
+        "start": "2026-02-08",
+        "count": 47
+      },
+      {
+        "start": "2026-02-15",
+        "count": 92
+      },
+      {
+        "start": "2026-02-22",
+        "count": 61
+      },
+      {
+        "start": "2026-03-01",
+        "count": 81
+      },
+      {
+        "start": "2026-03-08",
+        "count": 51
+      },
+      {
+        "start": "2026-03-15",
+        "count": 43
+      },
+      {
+        "start": "2026-03-22",
+        "count": 23
+      },
+      {
+        "start": "2026-03-29",
+        "count": 72
+      },
+      {
+        "start": "2026-04-05",
+        "count": 50
+      },
+      {
+        "start": "2026-04-12",
+        "count": 27
+      },
+      {
+        "start": "2026-04-19",
+        "count": 57
+      },
+      {
+        "start": "2026-04-26",
+        "count": 41
+      },
+      {
+        "start": "2026-05-03",
+        "count": 11
+      },
+      {
+        "start": "2026-05-10",
+        "count": 63
+      },
+      {
+        "start": "2026-05-17",
+        "count": 39
+      },
+      {
+        "start": "2026-05-24",
+        "count": 8
+      },
+      {
+        "start": "2026-05-31",
+        "count": 11
+      },
+      {
+        "start": "2026-06-07",
+        "count": 54
+      },
+      {
+        "start": "2026-06-14",
+        "count": 64
+      },
+      {
+        "start": "2026-06-21",
+        "count": 41
+      },
+      {
+        "start": "2026-06-28",
+        "count": 54
+      },
+      {
+        "start": "2026-07-05",
+        "count": 92
+      },
+      {
+        "start": "2026-07-12",
+        "count": 50
+      },
+      {
+        "start": "2026-07-19",
+        "count": 43
+      },
+      {
+        "start": "2026-07-26",
+        "count": 42
+      },
+      {
+        "start": "2026-08-02",
+        "count": 73
+      },
+      {
+        "start": "2026-08-09",
+        "count": 92
+      },
+      {
+        "start": "2026-08-16",
+        "count": 18
+      },
+      {
+        "start": "2026-08-23",
+        "count": 15
+      },
+      {
+        "start": "2026-08-30",
+        "count": 5
+      },
+      {
+        "start": "2026-09-06",
+        "count": 52
+      },
+      {
+        "start": "2026-09-13",
+        "count": 6
+      },
+      {
+        "start": "2026-09-20",
+        "count": 0
+      },
+      {
+        "start": "2026-09-27",
+        "count": 2
+      },
+      {
+        "start": "2026-10-04",
+        "count": 3
+      },
+      {
+        "start": "2026-10-11",
+        "count": 26
+      },
+      {
+        "start": "2026-10-18",
+        "count": 66
+      },
+      {
+        "start": "2026-10-25",
+        "count": 143
+      },
+      {
+        "start": "2026-11-01",
+        "count": 284
+      },
+      {
+        "start": "2026-11-08",
+        "count": 675
+      }
+    ]
+  },
+  "public": {
+    "repos": 54,
+    "stars": 175,
+    "recent": [
+      {
+        "name": "macros-dashboard-site",
+        "description": "Static build for macros.lnmunhoz.dev (aggregates only)",
+        "url": "https://github.com/lnmunhoz/macros-dashboard-site",
+        "stars": 0,
+        "pushedAt": "2026-11-09T09:25:07Z",
+        "language": "HTML"
+      },
+      {
+        "name": "agent-ready-repo",
+        "description": "A project template that coding agents can find their way around: feature folders, specs, a changelog, a task list and checks that keep them current.",
+        "url": "https://github.com/lnmunhoz/agent-ready-repo",
+        "stars": 2,
+        "pushedAt": "2026-11-06T16:31:35Z",
+        "language": "JavaScript"
+      },
+      {
+        "name": "pgcop",
+        "description": null,
+        "url": "https://github.com/lnmunhoz/pgcop",
+        "stars": 0,
+        "pushedAt": "2026-08-12T12:16:16Z",
+        "language": "TypeScript"
+      },
+      {
+        "name": "mongocop",
+        "description": "Interactive CLI tool for copying MongoDB databases.",
+        "url": "https://github.com/lnmunhoz/mongocop",
+        "stars": 1,
+        "pushedAt": "2026-07-02T11:07:13Z",
+        "language": "TypeScript"
+      },
+      {
+        "name": "skills",
+        "description": "My skills directory",
+        "url": "https://github.com/lnmunhoz/skills",
+        "stars": 0,
+        "pushedAt": "2026-06-25T04:43:22Z",
+        "language": null
+      }
+    ],
+    "mostStarred": [
+      {
+        "name": "nestjs-graphql-serverless",
+        "description": "Boilerplate for using NestJS with GraphQL (Code-First) on serverless environment (AWS Lambda)",
+        "url": "https://github.com/lnmunhoz/nestjs-graphql-serverless",
+        "stars": 77
+      },
+      {
+        "name": "react-redux-apollo-authenticaton-example",
+        "description": "Authentication flow example using http://scaphold.io: GraphQL backend as a service.",
+        "url": "https://github.com/lnmunhoz/react-redux-apollo-authenticaton-example",
+        "stars": 16
+      },
+      {
+        "name": "food-recommendation-bot",
+        "description": "🍔 Shows you open restaurants around based on Google Places API.",
+        "url": "https://github.com/lnmunhoz/food-recommendation-bot",
+        "stars": 11
+      }
+    ]
+  },
+  "activity": {
+    "since": "2025-11-14T06:12:01.225Z",
+    "commits": 2084,
+    "repos": 45,
+    "privateRepos": 32,
+    "aiPaired": 671,
+    "recent": {
+      "days": 90,
+      "commits": 993,
+      "aiPaired": 558
+    },
+    "hours": [
+      132,
+      45,
+      18,
+      3,
+      1,
+      1,
+      17,
+      22,
+      32,
+      31,
+      81,
+      195,
+      227,
+      165,
+      203,
+      139,
+      129,
+      86,
+      90,
+      75,
+      82,
+      74,
+      130,
+      106
+    ],
+    "weekdays": [
+      315,
+      295,
+      300,
+      314,
+      324,
+      346,
+      190
+    ],
+    "months": [
+      {
+        "month": "2026-01",
+        "commits": 36,
+        "aiPaired": 4
+      },
+      {
+        "month": "2026-02",
+        "commits": 240,
+        "aiPaired": 32
+      },
+      {
+        "month": "2026-03",
+        "commits": 154,
+        "aiPaired": 59
+      },
+      {
+        "month": "2026-04",
+        "commits": 161,
+        "aiPaired": 0
+      },
+      {
+        "month": "2026-05",
+        "commits": 99,
+        "aiPaired": 0
+      },
+      {
+        "month": "2026-06",
+        "commits": 107,
+        "aiPaired": 4
+      },
+      {
+        "month": "2026-07",
+        "commits": 189,
+        "aiPaired": 14
+      },
+      {
+        "month": "2026-08",
+        "commits": 123,
+        "aiPaired": 0
+      },
+      {
+        "month": "2026-09",
+        "commits": 20,
+        "aiPaired": 0
+      },
+      {
+        "month": "2026-10",
+        "commits": 199,
+        "aiPaired": 60
+      },
+      {
+        "month": "2026-11",
+        "commits": 756,
+        "aiPaired": 498
+      }
+    ],
+    "languages": [
+      {
+        "name": "TypeScript",
+        "share": 0.5707745287791343
+      },
+      {
+        "name": "Python",
+        "share": 0.173874873544999
+      },
+      {
+        "name": "JavaScript",
+        "share": 0.06584790227529476
+      },
+      {
+        "name": "Shell",
+        "share": 0.06517097433447165
+      },
+      {
+        "name": "Swift",
+        "share": 0.0462002684756404
+      },
+      {
+        "name": "HTML",
+        "share": 0.029611258869433287
+      },
+      {
+        "name": "Other",
+        "share": 0.04852019372102672
+      }
+    ]
+  }
+}
