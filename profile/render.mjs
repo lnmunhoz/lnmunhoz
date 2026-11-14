@@ -7,6 +7,14 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { peakIndex, rhythmLabel } from './stats.mjs';
 import { THEMES } from './theme.mjs';
+import { SCENES, SCENE_CLASSES } from './bangkok.mjs';
+
+// What the header card says, and which Bangkok scenes it draws (see bangkok.mjs).
+const HERO = {
+  tagline: 'building productivity & language learning tools',
+  location: 'Bangkok, Thailand',
+  scenes: ['temples', 'lanterns', 'river', 'tuktuk'],
+};
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const W = 840;
@@ -52,9 +60,12 @@ function rng(seed) {
 }
 
 // ── Hero: the past year as a skyline, one building per week ────────────────
-function hero(stats, t) {
-  const H = 300;
-  const ground = 258;
+function hero(stats, t, opts = {}) {
+  const scenes = opts.scenes ?? HERO.scenes;
+  const hasRiver = scenes.includes('river');
+  const ground = 276;
+  const riverDepth = hasRiver ? 30 : 0;
+  const H = ground + riverDepth + (hasRiver ? 28 : 42);
   const maxH = 140;
   const weeks = stats.lastYear.weeks;
   const pitch = Math.min(15, (W - 48) / weeks.length);
@@ -64,6 +75,16 @@ function hero(stats, t) {
   // Scale to just above the second-tallest week, so one huge week does not
   // flatten the rest; a taller week is cut with a break mark and its number.
   const cap = Math.max(1, Math.min(sorted[0], Math.ceil((sorted[1] || sorted[0]) * 1.15)));
+  const buildings = weeks.map((w, i) => ({
+    x: x0 + i * pitch,
+    w: bw,
+    h: w.count === 0 ? 3 : Math.max(6, (Math.min(w.count, cap) / cap) * maxH),
+    now: i === weeks.length - 1,
+    over: w.count > cap,
+    count: w.count,
+  }));
+  const layers = scenes.map((name) => SCENES[name]({ t, W, ground, river: riverDepth, buildings }));
+  const layer = (key) => layers.map((l) => l[key] || '').join('\n');
   const parts = [];
 
   const sky = t.dark
@@ -92,16 +113,13 @@ function hero(stats, t) {
     parts.push(cloud(380, 34, 0.9, 'drift'));
     parts.push(cloud(660, 92, 0.7, 'drift slow'));
   }
+  parts.push(layer('back'));
 
   const rand = rng(42);
-  weeks.forEach((w, i) => {
-    const x = x0 + i * pitch;
-    const isNow = i === weeks.length - 1;
-    const over = w.count > cap;
-    const h = w.count === 0 ? 3 : Math.max(6, (Math.min(w.count, cap) / cap) * maxH);
+  for (const b of buildings) {
+    const { x, h, now } = b;
     const y = ground - h;
-    const fill = isNow ? t.orange : t.building;
-    parts.push(`<rect x="${r1(x)}" y="${r1(y)}" width="${r1(bw)}" height="${r1(h)}" rx="1" fill="${fill}"/>`);
+    parts.push(`<rect x="${r1(x)}" y="${r1(y)}" width="${r1(bw)}" height="${r1(h)}" rx="1" fill="${now ? t.orange : t.building}"/>`);
     // windows
     if (h > 14) {
       const cols = bw >= 10 ? 2 : 1;
@@ -111,47 +129,54 @@ function hero(stats, t) {
           if (!lit) continue;
           const wx = x + (cols === 2 ? 2 + c * (bw - 7) : (bw - 3) / 2);
           const flicker = t.dark && rand() < 0.04 ? ` class="fl" style="animation-delay:${r1(rand() * 6)}s"` : '';
-          parts.push(`<rect x="${r1(wx)}" y="${r1(wy)}" width="3" height="3" fill="${isNow ? t.nowWindow : t.window}"${flicker}/>`);
+          parts.push(`<rect x="${r1(wx)}" y="${r1(wy)}" width="3" height="3" fill="${now ? t.nowWindow : t.window}"${flicker}/>`);
         }
       }
     }
-    if (over) {
+    if (b.over) {
       // break mark: the real tower is taller than the frame allows
       parts.push(`<path d="M${r1(x - 2)} ${r1(y + 12)}l${r1(bw + 4)} -5M${r1(x - 2)} ${r1(y + 17)}l${r1(bw + 4)} -5" stroke="${t.surface}" stroke-width="2.5"/>`);
     }
-    if (isNow) {
+    if (now) {
       parts.push(`<rect x="${r1(x + bw / 2 - 0.75)}" y="${r1(y - 9)}" width="1.5" height="9" fill="${t.orange}"/>`);
       parts.push(`<circle cx="${r1(x + bw / 2)}" cy="${r1(y - 10)}" r="2.2" fill="${t.orange}" class="beacon"/>`);
-      parts.push(text(x - 6, y - 16, `${fmt(w.count)} this week`, { size: 11.5, weight: 600, fill: t.text, anchor: 'end' }));
+      parts.push(text(x - 6, y - 16, `${fmt(b.count)} this week`, { size: 11.5, weight: 600, fill: t.text, anchor: 'end' }));
     }
-  });
-  parts.push(`<rect x="0" y="${ground}" width="${W}" height="1" fill="${t.axis}"/></g>`);
+  }
+  parts.push(layer('below'));
+  parts.push(`<rect x="0" y="${ground}" width="${W}" height="1" fill="${t.axis}"/>`);
+  parts.push(layer('front'));
+  parts.push('</g>');
 
   // month labels where a new month starts
   let last = '';
   weeks.forEach((w, i) => {
     const m = MONTHS[Number(w.start.slice(5, 7)) - 1];
     if (m !== last && i > 1 && i < weeks.length - 1) {
-      parts.push(text(x0 + i * pitch, ground + 17, m, { size: 10.5, fill: t.muted }));
+      parts.push(text(x0 + i * pitch, ground + riverDepth + 17, m, { size: 10.5, fill: t.muted }));
     }
     last = m;
   });
 
   parts.push(text(28, 54, stats.name || stats.login, { size: 30, weight: 700, fill: t.text }));
-  parts.push(text(29, 80, 'building productivity & language learning tools · Bangkok', { size: 15, fill: t.text2 }));
-  parts.push(text(29, 104, '› my past year on GitHub, one building per week', { size: 12, fill: t.muted, font: MONO }));
+  parts.push(text(29, 80, HERO.tagline, { size: 15, fill: t.text2 }));
+  // map pin, then the place
+  parts.push(`<path transform="translate(29 92)" fill-rule="evenodd" fill="${t.orange}" d="M5 0C2.2 0 0 2.2 0 5c0 3.7 5 9 5 9s5-5.3 5-9C10 2.2 7.8 0 5 0zm0 3.1a1.9 1.9 0 1 1 0 3.8a1.9 1.9 0 1 1 0-3.8z"/>`);
+  parts.push(text(45, 104, HERO.location, { size: 13, weight: 500, fill: t.text2 }));
+  parts.push(text(29, 128, '› my past year on GitHub, one building per week', { size: 12, fill: t.muted, font: MONO }));
 
   const style = `@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}@keyframes fl{0%,92%,100%{opacity:1}95%{opacity:.15}}@keyframes beacon{0%,100%{opacity:1}50%{opacity:.25}}@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
 .tw{animation:tw 4s ease-in-out infinite}.fl{animation:fl 7s steps(1) infinite}.beacon{animation:beacon 2.4s ease-in-out infinite}
 .drift{animation:drift 18s ease-in-out infinite}.slow{animation-duration:26s}
-@media (prefers-reduced-motion:reduce){.tw,.fl,.beacon,.drift{animation:none}}`;
+${layer('style')}
+@media (prefers-reduced-motion:reduce){.tw,.fl,.beacon,.drift,${SCENE_CLASSES.map((c) => `.${c}`).join(',')}{animation:none}}`;
   const peak = weeks.reduce((a, b) => (b.count > a.count ? b : a));
   return svg({
     height: H,
     t,
     style,
-    title: `${stats.name}: productivity and language learning tools, Bangkok`,
-    desc: `A city skyline where each building is one week of GitHub contributions over the past year. ${fmt(stats.lastYear.total)} contributions in total; the busiest week, starting ${peak.start}, had ${fmt(peak.count)}.`,
+    title: `${stats.name}: ${HERO.tagline}, ${HERO.location}`,
+    desc: `A ${HERO.location} skyline where each building is one week of GitHub contributions over the past year. ${fmt(stats.lastYear.total)} contributions in total; the busiest week, starting ${peak.start}, had ${fmt(peak.count)}.`,
     body: parts.join('\n'),
   });
 }
@@ -373,7 +398,7 @@ async function main() {
   console.log(`Rendered ${written.length} cards: ${written.join(', ')}`);
 }
 
-export { picture };
+export { picture, hero };
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch((err) => {

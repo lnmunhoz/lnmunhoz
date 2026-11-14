@@ -7,7 +7,7 @@ A GitHub Action ([profile.yml](../.github/workflows/profile.yml)) rebuilds the c
    - my commits on the default branch of every repo I pushed to in the past year, private and organisation repos included: only when each commit was written,
    - the language mix of those repos, weighted by how many commits I made in each,
    - my public repos, for the "Lately in public" list (minus the ones in `HIDDEN_PUBLIC_REPOS` in collect.mjs).
-2. **[render.mjs](render.mjs)** draws each card as a light and a dark SVG in [assets/](../assets), and refreshes the generated parts of the README (between the `<!-- name:start -->` and `<!-- name:end -->` markers). Everything else in the README is hand-written.
+2. **[render.mjs](render.mjs)** draws each card (the header's Bangkok scenes, temples, lanterns, river and tuk-tuk, live in [bangkok.mjs](bangkok.mjs) and are switched on in `HERO`) as a light and a dark SVG in [assets/](../assets), and refreshes the generated parts of the README (between the `<!-- name:start -->` and `<!-- name:end -->` markers). Everything else in the README is hand-written.
 
 No dependencies: plain Node 22.
 
