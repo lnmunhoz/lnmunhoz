@@ -1,11 +1,11 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Lucas N. Munhoz, full-stack developer in Bangkok. A city skyline where each building is one week of my GitHub activity over the past year." src="assets/hero-light.svg" width="100%">
+  <img alt="Lucas N. Munhoz, building productivity tools and passion projects in Bangkok. A city skyline where each building is one week of my GitHub activity over the past year." src="assets/hero-light.svg" width="100%">
 </picture>
 
 ### Olá mundo, this is Lucas!
 
-I'm a full-stack developer living in Bangkok. I've been writing software since 2012 and pushing it here since 2013, mostly TypeScript these days, with a growing side of Python and Swift.
+I build productivity tools and passion projects from Bangkok. Most of them start as something I need myself: to stay focused, to learn Thai, to get a bit better every day.
 
 ### What I'm building
 

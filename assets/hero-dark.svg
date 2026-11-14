@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="300" viewBox="0 0 840 300" role="img" aria-labelledby="t d">
-<title id="t">Lucas N. Munhoz: full-stack developer in Bangkok</title>
+<title id="t">Lucas N. Munhoz: productivity tools and passion projects, Bangkok</title>
 <desc id="d">A city skyline where each building is one week of GitHub contributions over the past year. 2,774 contributions in total; the busiest week, starting 2026-11-08, had 683.</desc>
 <style>text{font-variant-numeric:tabular-nums}@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}@keyframes fl{0%,92%,100%{opacity:1}95%{opacity:.15}}@keyframes beacon{0%,100%{opacity:1}50%{opacity:.25}}@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
 .tw{animation:tw 4s ease-in-out infinite}.fl{animation:fl 7s steps(1) infinite}.beacon{animation:beacon 2.4s ease-in-out infinite}
@@ -202,6 +202,6 @@
 <text x="728.3" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="start">Oct</text>
 <text x="788.1" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#7d8590" text-anchor="start">Nov</text>
 <text x="28" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#f0f6fc" text-anchor="start">Lucas N. Munhoz</text>
-<text x="29" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#9198a1" text-anchor="start">full-stack developer · Bangkok, Thailand</text>
+<text x="29" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#9198a1" text-anchor="start">productivity tools &amp; passion projects · Bangkok</text>
 <text x="29" y="104" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="400" fill="#7d8590" text-anchor="start">› my past year on GitHub, one building per week</text>
 </svg>

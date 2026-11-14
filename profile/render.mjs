@@ -138,7 +138,7 @@ function hero(stats, t) {
   });
 
   parts.push(text(28, 54, stats.name || stats.login, { size: 30, weight: 700, fill: t.text }));
-  parts.push(text(29, 80, 'full-stack developer · Bangkok, Thailand', { size: 15, fill: t.text2 }));
+  parts.push(text(29, 80, 'productivity tools & passion projects · Bangkok', { size: 15, fill: t.text2 }));
   parts.push(text(29, 104, '› my past year on GitHub, one building per week', { size: 12, fill: t.muted, font: MONO }));
 
   const style = `@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}@keyframes fl{0%,92%,100%{opacity:1}95%{opacity:.15}}@keyframes beacon{0%,100%{opacity:1}50%{opacity:.25}}@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
@@ -150,7 +150,7 @@ function hero(stats, t) {
     height: H,
     t,
     style,
-    title: `${stats.name}: full-stack developer in Bangkok`,
+    title: `${stats.name}: productivity tools and passion projects, Bangkok`,
     desc: `A city skyline where each building is one week of GitHub contributions over the past year. ${fmt(stats.lastYear.total)} contributions in total; the busiest week, starting ${peak.start}, had ${fmt(peak.count)}.`,
     body: parts.join('\n'),
   });
