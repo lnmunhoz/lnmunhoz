@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Lucas N. Munhoz, building productivity and language learning tools in Bangkok. A city skyline where each building is one week of my GitHub activity over the past year." src="assets/hero-light.svg" width="100%">
+  <img alt="Lucas N. Munhoz, building productivity and language learning tools in Bangkok. A city skyline where each building is one week of my GitHub activity over the past six months." src="assets/hero-light.svg" width="100%">
 </picture>
 
 ### Olá mundo, this is Lucas!
@@ -12,11 +12,11 @@ I'm building productivity and language learning tools from Bangkok. Most of them
 - [**ThaiLookup**](https://thailookup.com) · instant Thai translation, romanization and tone breakdowns for any word, with decks to review them. I'm learning Thai myself.
 - [**agent-ready-repo**](https://github.com/lnmunhoz/agent-ready-repo) · a project template coding agents can find their way around: feature folders, specs, a changelog and checks that keep them current.
 
-### My year in commits
+### My last six months in commits
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/numbers-dark.svg">
-  <img alt="My GitHub numbers for the past year: contributions, current streak, commits and repos, and contributions since I joined." src="assets/numbers-light.svg" width="100%">
+  <img alt="My GitHub numbers for the past six months: contributions, current streak, commits and repos, and contributions since I joined." src="assets/numbers-light.svg" width="100%">
 </picture>
 
 <!-- updated:start -->

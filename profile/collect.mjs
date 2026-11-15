@@ -19,6 +19,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'data', 'stats.json');
 // Languages that are build output or markup noise rather than code I write.
 // Public repos left out of the "Lately in public" list.
+// How much recent activity the cards show: whole calendar weeks, one building each.
+const RECENT_WEEKS = 26; // about six months
 const HIDDEN_PUBLIC_REPOS = ['skills', 'macros-dashboard-site', 'disgit'];
 const IGNORED_LANGUAGES = ['Dockerfile', 'Makefile', 'Procfile', 'Batchfile', 'PowerShell', 'Jupyter Notebook'];
 
@@ -29,7 +31,7 @@ async function main() {
   const user = await fetchUser();
   const calendar = await fetchCalendar(user);
   const publicRepos = await fetchPublicRepos();
-  const activity = (await canReadPrivate()) ? await fetchActivity(user.id) : null;
+  const activity = (await canReadPrivate()) ? await fetchActivity(user.id, calendar.recent.since) : null;
   if (!activity) console.log('No private access: keeping the previous commit and language totals.');
 
   const stats = {
@@ -49,8 +51,8 @@ async function main() {
   await mkdir(dirname(OUT), { recursive: true });
   await writeFile(OUT, JSON.stringify(stats, null, 2) + '\n');
   console.log(
-    `Saved ${OUT}: ${stats.lastYear.total} contributions in the last year, ` +
-      `${stats.activity?.commits ?? '?'} commits read, streak ${stats.lastYear.streak.current} days.`,
+    `Saved ${OUT}: ${stats.recent.total} contributions in the last ${RECENT_WEEKS} weeks, ` +
+      `${stats.activity?.commits ?? '?'} commits read, streak ${stats.recent.streak.current} days.`,
   );
 }
 
@@ -95,6 +97,8 @@ async function fetchCalendar(user) {
   for (const y of years) for (const d of toDays(u[`y${y}`].contributionCalendar)) byDate.set(d.date, d);
   const allDays = [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
   const lastYearDays = toDays(u.lastYear.contributionCalendar);
+  // The last RECENT_WEEKS calendar weeks (weeks start on the calendar's first day, a Sunday).
+  const recentDays = lastYearDays.slice(Math.max(0, Math.ceil(lastYearDays.length / 7) - RECENT_WEEKS) * 7);
 
   return {
     years: years.map((y) => ({ year: y, total: u[`y${y}`].contributionCalendar.totalContributions })),
@@ -104,12 +108,14 @@ async function fetchCalendar(user) {
       longestStreak: streaks(allDays).longest,
       busiestDay: busiestDay(allDays),
     },
-    lastYear: {
-      total: u.lastYear.contributionCalendar.totalContributions,
-      activeDays: lastYearDays.filter((d) => d.count > 0).length,
+    recent: {
+      since: `${recentDays[0].date}T00:00:00Z`,
+      total: recentDays.reduce((sum, d) => sum + d.count, 0),
+      activeDays: recentDays.filter((d) => d.count > 0).length,
+      // the streak runs over the whole last year, so a long one is not cut at the window
       streak: streaks(lastYearDays),
-      busiestDay: busiestDay(lastYearDays),
-      weeks: weeklyTotals(lastYearDays),
+      busiestDay: busiestDay(recentDays),
+      weeks: weeklyTotals(recentDays),
     },
   };
 }
@@ -147,10 +153,9 @@ async function fetchPublicRepos() {
   };
 }
 
-// My commits on the default branch of every repo I pushed to in the past year,
+// My commits on the default branch of every repo I pushed to since `since`,
 // private and organisation repos included, reduced to totals.
-async function fetchActivity(userId) {
-  const since = new Date(Date.now() - 365 * 864e5).toISOString();
+async function fetchActivity(userId, since) {
   const hours = Array(24).fill(0);
   const weekdays = Array(7).fill(0);
   const repoTotals = [];

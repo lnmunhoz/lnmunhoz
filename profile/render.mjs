@@ -58,7 +58,7 @@ function rng(seed) {
   return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 2 ** 32);
 }
 
-// ── Hero: the past year as a skyline, one building per week ────────────────
+// ── Hero: the past six months as a skyline, one building per week ────────────────
 function hero(stats, t, opts = {}) {
   const scenes = opts.scenes ?? HERO.scenes;
   const hasRiver = scenes.includes('river');
@@ -66,8 +66,8 @@ function hero(stats, t, opts = {}) {
   const riverDepth = hasRiver ? 30 : 0;
   const H = ground + riverDepth + (hasRiver ? 28 : 42);
   const maxH = 140;
-  const weeks = stats.lastYear.weeks;
-  const pitch = Math.min(15, (W - 48) / weeks.length);
+  const weeks = stats.recent.weeks;
+  const pitch = Math.min(30, (W - 48) / weeks.length);
   const bw = pitch - 4;
   const x0 = (W - pitch * weeks.length + 4) / 2;
   const sorted = weeks.map((w) => w.count).sort((a, b) => b - a);
@@ -121,12 +121,12 @@ function hero(stats, t, opts = {}) {
     parts.push(`<rect x="${r1(x)}" y="${r1(y)}" width="${r1(bw)}" height="${r1(h)}" rx="1" fill="${now ? t.orange : t.building}"/>`);
     // windows
     if (h > 14) {
-      const cols = bw >= 10 ? 2 : 1;
+      const cols = bw >= 22 ? 3 : bw >= 10 ? 2 : 1;
       for (let wy = y + 5; wy < ground - 6; wy += 7) {
         for (let c = 0; c < cols; c += 1) {
           const lit = rand() < (t.dark ? 0.38 : 0.5);
           if (!lit) continue;
-          const wx = x + (cols === 2 ? 2 + c * (bw - 7) : (bw - 3) / 2);
+          const wx = x + (cols === 1 ? (bw - 3) / 2 : 3 + (c * (bw - 9)) / (cols - 1));
           const flicker = t.dark && rand() < 0.04 ? ` class="fl" style="animation-delay:${r1(rand() * 6)}s"` : '';
           parts.push(`<rect x="${r1(wx)}" y="${r1(wy)}" width="3" height="3" fill="${now ? t.nowWindow : t.window}"${flicker}/>`);
         }
@@ -139,7 +139,6 @@ function hero(stats, t, opts = {}) {
     if (now) {
       parts.push(`<rect x="${r1(x + bw / 2 - 0.75)}" y="${r1(y - 9)}" width="1.5" height="9" fill="${t.orange}"/>`);
       parts.push(`<circle cx="${r1(x + bw / 2)}" cy="${r1(y - 10)}" r="2.2" fill="${t.orange}" class="beacon"/>`);
-      parts.push(text(x - 6, y - 16, `${fmt(b.count)} this week`, { size: 11.5, weight: 600, fill: t.text, anchor: 'end' }));
     }
   }
   parts.push(layer('below'));
@@ -162,7 +161,7 @@ function hero(stats, t, opts = {}) {
   // map pin, then the place
   parts.push(`<path transform="translate(29 92)" fill-rule="evenodd" fill="${t.orange}" d="M5 0C2.2 0 0 2.2 0 5c0 3.7 5 9 5 9s5-5.3 5-9C10 2.2 7.8 0 5 0zm0 3.1a1.9 1.9 0 1 1 0 3.8a1.9 1.9 0 1 1 0-3.8z"/>`);
   parts.push(text(45, 104, HERO.location, { size: 13, weight: 500, fill: t.text2 }));
-  parts.push(text(29, 128, '› my past year on GitHub, one building per week', { size: 12, fill: t.muted, font: MONO }));
+  parts.push(text(29, 128, '› my past 6 months on GitHub, one building per week', { size: 12, fill: t.muted, font: MONO }));
 
   const style = `@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}@keyframes fl{0%,92%,100%{opacity:1}95%{opacity:.15}}@keyframes beacon{0%,100%{opacity:1}50%{opacity:.25}}@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
 .tw{animation:tw 4s ease-in-out infinite}.fl{animation:fl 7s steps(1) infinite}.beacon{animation:beacon 2.4s ease-in-out infinite}
@@ -175,7 +174,7 @@ ${layer('style')}
     t,
     style,
     title: `${stats.name}: ${HERO.tagline}, ${HERO.location}`,
-    desc: `A ${HERO.location} skyline where each building is one week of GitHub contributions over the past year. ${fmt(stats.lastYear.total)} contributions in total; the busiest week, starting ${peak.start}, had ${fmt(peak.count)}.`,
+    desc: `A ${HERO.location} skyline where each building is one week of GitHub contributions over the past six months. ${fmt(stats.recent.total)} contributions in total; the busiest week, starting ${peak.start}, had ${fmt(peak.count)}.`,
     body: parts.join('\n'),
   });
 }
@@ -184,15 +183,13 @@ ${layer('style')}
 function numbers(stats, t) {
   const H = 132;
   const a = stats.activity;
-  const thisYear = new Date(stats.generatedAt).getUTCFullYear();
-  const before = stats.years.filter((y) => y.year < thisYear).reduce((m, y) => Math.max(m, y.total), 0);
-  const streak = stats.lastYear.streak.current;
+  const streak = stats.recent.streak.current;
   const longest = stats.lifetime.longestStreak.length;
   const tiles = [
     {
-      value: fmt(stats.lastYear.total),
+      value: fmt(stats.recent.total),
       label: 'contributions',
-      note: stats.lastYear.total > before ? 'past 12 months, a record' : 'in the past 12 months',
+      note: `in the past 6 months, on ${stats.recent.activeDays} days`,
     },
     {
       value: `${streak} ${streak === 1 ? 'day' : 'days'}`,
