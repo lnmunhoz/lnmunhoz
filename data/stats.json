@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T22:39:46.280Z",
+  "generatedAt": "2026-11-15T06:52:54.070Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,11 +60,11 @@
     },
     {
       "year": 2026,
-      "total": 2846
+      "total": 2863
     }
   ],
   "lifetime": {
-    "total": 12893,
+    "total": 12910,
     "activeDays": 1925,
     "longestStreak": {
       "length": 27,
@@ -77,7 +77,7 @@
     }
   },
   "lastYear": {
-    "total": 2846,
+    "total": 2863,
     "activeDays": 215,
     "streak": {
       "current": 27,
@@ -302,7 +302,7 @@
       },
       {
         "start": "2026-11-15",
-        "count": 2
+        "count": 19
       }
     ]
   },
@@ -310,6 +310,14 @@
     "repos": 54,
     "stars": 175,
     "recent": [
+      {
+        "name": "npm-scripts-auto",
+        "description": "Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases.",
+        "url": "https://github.com/lnmunhoz/npm-scripts-auto",
+        "stars": 1,
+        "pushedAt": "2026-11-15T04:25:09Z",
+        "language": "Shell"
+      },
       {
         "name": "agent-ready-repo",
         "description": "A project template that coding agents can find their way around: feature folders, specs, a changelog, a task list and checks that keep them current.",
@@ -333,14 +341,6 @@
         "stars": 1,
         "pushedAt": "2026-07-02T11:07:13Z",
         "language": "TypeScript"
-      },
-      {
-        "name": "npm-scripts-auto",
-        "description": "Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases.",
-        "url": "https://github.com/lnmunhoz/npm-scripts-auto",
-        "stars": 1,
-        "pushedAt": "2026-06-15T03:12:29Z",
-        "language": "Shell"
       },
       {
         "name": "pi-vercel-deployments",
@@ -373,8 +373,8 @@
     ]
   },
   "activity": {
-    "since": "2025-11-14T22:39:27.234Z",
-    "commits": 2170,
+    "since": "2025-11-15T06:52:36.278Z",
+    "commits": 2187,
     "repos": 45,
     "privateRepos": 32,
     "hours": [
@@ -384,14 +384,14 @@
       3,
       1,
       1,
-      17,
-      22,
+      18,
+      23,
+      33,
       32,
-      31,
-      81,
-      195,
-      227,
-      178,
+      83,
+      204,
+      228,
+      179,
       220,
       163,
       152,
@@ -410,36 +410,36 @@
       314,
       324,
       430,
-      192
+      209
     ],
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5745430902725441
+        "share": 0.573075996471167
       },
       {
         "name": "Python",
-        "share": 0.1677387868099599
+        "share": 0.16888718928167812
       },
       {
         "name": "JavaScript",
-        "share": 0.07309380434084559
+        "share": 0.07268239501964557
       },
       {
         "name": "Shell",
-        "share": 0.06363086055378084
+        "share": 0.06526407935433057
       },
       {
         "name": "Swift",
-        "share": 0.04542540297929763
+        "share": 0.04507133060394318
       },
       {
         "name": "HTML",
-        "share": 0.028599449933883123
+        "share": 0.028392391060052525
       },
       {
         "name": "Other",
-        "share": 0.046968605109688616
+        "share": 0.04662661820918281
       }
     ]
   }

@@ -20,16 +20,16 @@ I'm building productivity and language learning tools from Bangkok. Most of them
 </picture>
 
 <!-- updated:start -->
-<sub>Last updated 14 Nov 2026</sub>
+<sub>Last updated 15 Nov 2026</sub>
 <!-- updated:end -->
 
 ### Lately in public
 
 <!-- public:start -->
+- [**npm-scripts-auto**](https://github.com/lnmunhoz/npm-scripts-auto) · Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases. <sub>Shell · Nov 2026</sub>
 - [**agent-ready-repo**](https://github.com/lnmunhoz/agent-ready-repo) · A project template that coding agents can find their way around: feature folders, specs, a changelog, a task list and checks that keep them current. <sub>JavaScript · Nov 2026</sub>
 - [**pgcop**](https://github.com/lnmunhoz/pgcop) <sub>TypeScript · Aug 2026</sub>
 - [**mongocop**](https://github.com/lnmunhoz/mongocop) · Interactive CLI tool for copying MongoDB databases. <sub>TypeScript · Jul 2026</sub>
-- [**npm-scripts-auto**](https://github.com/lnmunhoz/npm-scripts-auto) · Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases. <sub>Shell · Jun 2026</sub>
 - [**pi-vercel-deployments**](https://github.com/lnmunhoz/pi-vercel-deployments) · Pi extension for Vercel deployment status, inspection, and cancellation. <sub>TypeScript · Apr 2026</sub>
 <!-- public:end -->
 
