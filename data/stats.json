@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T06:53:02.114Z",
+  "generatedAt": "2026-11-16T22:24:01.601Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,16 +60,16 @@
     },
     {
       "year": 2026,
-      "total": 3264
+      "total": 3457
     }
   ],
   "lifetime": {
-    "total": 13311,
-    "activeDays": 1926,
+    "total": 13504,
+    "activeDays": 1927,
     "longestStreak": {
-      "length": 28,
+      "length": 29,
       "start": "2026-10-20",
-      "end": "2026-11-16"
+      "end": "2026-11-17"
     },
     "busiestDay": {
       "date": "2026-11-15",
@@ -78,14 +78,14 @@
   },
   "recent": {
     "since": "2026-05-24T00:00:00Z",
-    "total": 2417,
-    "activeDays": 117,
+    "total": 2610,
+    "activeDays": 118,
     "streak": {
-      "current": 28,
+      "current": 29,
       "longest": {
-        "length": 28,
+        "length": 29,
         "start": "2026-10-20",
-        "end": "2026-11-16"
+        "end": "2026-11-17"
       }
     },
     "busiestDay": {
@@ -195,14 +195,22 @@
       },
       {
         "start": "2026-11-15",
-        "count": 420
+        "count": 613
       }
     ]
   },
   "public": {
-    "repos": 54,
-    "stars": 175,
+    "repos": 55,
+    "stars": 176,
     "recent": [
+      {
+        "name": "cello",
+        "description": "Local task board for one developer and their AI coding agents",
+        "url": "https://github.com/lnmunhoz/cello",
+        "stars": 1,
+        "pushedAt": "2026-11-16T17:35:31Z",
+        "language": "TypeScript"
+      },
       {
         "name": "npm-scripts-auto",
         "description": "Auto loads all npm scripts from the package.json in your current directory, and turn them into aliases.",
@@ -234,14 +242,6 @@
         "stars": 1,
         "pushedAt": "2026-07-02T11:07:13Z",
         "language": "TypeScript"
-      },
-      {
-        "name": "pi-vercel-deployments",
-        "description": "Pi extension for Vercel deployment status, inspection, and cancellation.",
-        "url": "https://github.com/lnmunhoz/pi-vercel-deployments",
-        "stars": 0,
-        "pushedAt": "2026-04-03T07:45:35Z",
-        "language": "TypeScript"
       }
     ],
     "mostStarred": [
@@ -267,12 +267,12 @@
   },
   "activity": {
     "since": "2026-05-24T00:00:00Z",
-    "commits": 1905,
+    "commits": 2097,
     "repos": 33,
-    "privateRepos": 23,
+    "privateRepos": 22,
     "hours": [
-      140,
-      47,
+      155,
+      48,
       17,
       3,
       1,
@@ -284,21 +284,21 @@
       78,
       174,
       179,
-      135,
-      140,
-      96,
-      106,
-      85,
-      90,
-      111,
+      139,
+      151,
+      116,
+      147,
+      109,
+      102,
+      112,
       76,
-      80,
-      120,
-      99
+      105,
+      141,
+      116
     ],
     "weekdays": [
-      374,
-      200,
+      550,
+      216,
       226,
       217,
       234,
@@ -308,31 +308,31 @@
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5705277022717777
+        "share": 0.5938744672524315
       },
       {
         "name": "Python",
-        "share": 0.1650222414397327
+        "share": 0.15241072035337686
       },
       {
         "name": "JavaScript",
-        "share": 0.0826679368119628
+        "share": 0.08333784398480734
       },
       {
         "name": "Shell",
-        "share": 0.07212011610076279
+        "share": 0.0678957916995685
       },
       {
         "name": "Swift",
-        "share": 0.049459524406877536
+        "share": 0.046740911273820095
       },
       {
         "name": "HTML",
-        "share": 0.030832561958105676
+        "share": 0.028484387868893343
       },
       {
         "name": "Other",
-        "share": 0.02936991701078071
+        "share": 0.027255877567102252
       }
     ]
   }
