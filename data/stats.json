@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-17T08:11:41.356Z",
+  "generatedAt": "2026-11-17T21:08:36.770Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
   "joined": "2013-05-08T12:51:58Z",
-  "followers": 188,
+  "followers": 187,
   "years": [
     {
       "year": 2013,
@@ -60,16 +60,16 @@
     },
     {
       "year": 2026,
-      "total": 3574
+      "total": 3635
     }
   ],
   "lifetime": {
-    "total": 13621,
-    "activeDays": 1927,
+    "total": 13682,
+    "activeDays": 1928,
     "longestStreak": {
-      "length": 29,
+      "length": 30,
       "start": "2026-10-20",
-      "end": "2026-11-17"
+      "end": "2026-11-18"
     },
     "busiestDay": {
       "date": "2026-11-15",
@@ -78,14 +78,14 @@
   },
   "recent": {
     "since": "2026-05-24T00:00:00Z",
-    "total": 2727,
-    "activeDays": 118,
+    "total": 2788,
+    "activeDays": 119,
     "streak": {
-      "current": 29,
+      "current": 30,
       "longest": {
-        "length": 29,
+        "length": 30,
         "start": "2026-10-20",
-        "end": "2026-11-17"
+        "end": "2026-11-18"
       }
     },
     "busiestDay": {
@@ -195,7 +195,7 @@
       },
       {
         "start": "2026-11-15",
-        "count": 730
+        "count": 791
       }
     ]
   },
@@ -208,7 +208,7 @@
         "description": "Local task board for one developer and their AI coding agents",
         "url": "https://github.com/lnmunhoz/cello",
         "stars": 1,
-        "pushedAt": "2026-11-17T07:21:46Z",
+        "pushedAt": "2026-11-17T18:24:21Z",
         "language": "TypeScript"
       },
       {
@@ -267,12 +267,12 @@
   },
   "activity": {
     "since": "2026-05-24T00:00:00Z",
-    "commits": 2210,
+    "commits": 2264,
     "repos": 33,
     "privateRepos": 22,
     "hours": [
-      172,
-      59,
+      186,
+      71,
       26,
       3,
       1,
@@ -286,20 +286,20 @@
       201,
       142,
       163,
-      126,
-      147,
-      109,
-      102,
+      139,
+      152,
       112,
+      103,
+      113,
       76,
-      105,
-      141,
-      116
+      106,
+      144,
+      117
     ],
     "weekdays": [
       550,
-      329,
-      226,
+      357,
+      252,
       217,
       234,
       293,
@@ -308,31 +308,31 @@
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.6039695577173274
+        "share": 0.5522867016136974
       },
       {
         "name": "Python",
-        "share": 0.14696113724244653
-      },
-      {
-        "name": "JavaScript",
-        "share": 0.08153271325421807
+        "share": 0.1728028806668921
       },
       {
         "name": "Shell",
-        "share": 0.06744905871225472
+        "share": 0.08563050485782103
+      },
+      {
+        "name": "JavaScript",
+        "share": 0.08206674388398737
       },
       {
         "name": "Swift",
-        "share": 0.045859919294156865
+        "share": 0.04548683741749566
       },
       {
         "name": "HTML",
-        "share": 0.027300728946679825
+        "share": 0.02690692969748287
       },
       {
         "name": "Other",
-        "share": 0.02692688483291676
+        "share": 0.03481940186262367
       }
     ]
   }
