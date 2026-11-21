@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:28:13.996Z",
+  "generatedAt": "2026-11-21T19:33:55.149Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,16 +60,16 @@
     },
     {
       "year": 2026,
-      "total": 3940
+      "total": 3946
     }
   ],
   "lifetime": {
-    "total": 13987,
-    "activeDays": 1931,
+    "total": 13993,
+    "activeDays": 1932,
     "longestStreak": {
-      "length": 33,
+      "length": 34,
       "start": "2026-10-20",
-      "end": "2026-11-21"
+      "end": "2026-11-22"
     },
     "busiestDay": {
       "date": "2026-11-15",
@@ -77,15 +77,15 @@
     }
   },
   "recent": {
-    "since": "2026-05-24T00:00:00Z",
-    "total": 3093,
-    "activeDays": 122,
+    "since": "2026-05-31T00:00:00Z",
+    "total": 3091,
+    "activeDays": 118,
     "streak": {
-      "current": 33,
+      "current": 34,
       "longest": {
-        "length": 33,
+        "length": 34,
         "start": "2026-10-20",
-        "end": "2026-11-21"
+        "end": "2026-11-22"
       }
     },
     "busiestDay": {
@@ -93,10 +93,6 @@
       "count": 300
     },
     "weeks": [
-      {
-        "start": "2026-05-24",
-        "count": 8
-      },
       {
         "start": "2026-05-31",
         "count": 11
@@ -195,7 +191,11 @@
       },
       {
         "start": "2026-11-15",
-        "count": 1096
+        "count": 1099
+      },
+      {
+        "start": "2026-11-22",
+        "count": 3
       }
     ]
   },
@@ -266,13 +266,13 @@
     ]
   },
   "activity": {
-    "since": "2026-05-24T00:00:00Z",
-    "commits": 2569,
+    "since": "2026-05-31T00:00:00Z",
+    "commits": 2572,
     "repos": 33,
     "privateRepos": 22,
     "hours": [
-      219,
-      97,
+      221,
+      98,
       29,
       3,
       1,
@@ -284,55 +284,55 @@
       95,
       219,
       220,
-      154,
+      151,
       180,
       151,
       159,
       113,
-      121,
-      117,
+      122,
+      118,
       77,
       120,
-      153,
+      154,
       132
     ],
     "weekdays": [
       550,
       357,
-      391,
-      355,
+      389,
+      354,
       252,
-      303,
-      361
+      306,
+      364
     ],
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5761676168490033
+        "share": 0.5746264814690073
       },
       {
         "name": "Python",
-        "share": 0.16738556616335235
+        "share": 0.1684195600516817
       },
       {
         "name": "Shell",
-        "share": 0.08337244876107189
+        "share": 0.08405637437938285
       },
       {
         "name": "JavaScript",
-        "share": 0.0722923330779346
+        "share": 0.07206247387644744
       },
       {
         "name": "Swift",
-        "share": 0.039728279769882836
+        "share": 0.03968158190672231
       },
       {
         "name": "HTML",
-        "share": 0.029268565939956866
+        "share": 0.029420522366961768
       },
       {
         "name": "Other",
-        "share": 0.03178518943879822
+        "share": 0.03173300594979636
       }
     ]
   }
