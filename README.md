@@ -20,7 +20,7 @@ I'm building productivity and language learning tools from Bangkok. Most of them
 </picture>
 
 <!-- updated:start -->
-<sub>Last updated 21 Nov 2026</sub>
+<sub>Last updated 22 Nov 2026</sub>
 <!-- updated:end -->
 
 ### Lately in public
