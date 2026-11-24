@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T00:07:46.151Z",
+  "generatedAt": "2026-11-24T10:09:34.442Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,11 +60,11 @@
     },
     {
       "year": 2026,
-      "total": 4053
+      "total": 4093
     }
   ],
   "lifetime": {
-    "total": 14100,
+    "total": 14140,
     "activeDays": 1934,
     "longestStreak": {
       "length": 36,
@@ -78,7 +78,7 @@
   },
   "recent": {
     "since": "2026-05-31T00:00:00Z",
-    "total": 3198,
+    "total": 3238,
     "activeDays": 120,
     "streak": {
       "current": 36,
@@ -195,14 +195,22 @@
       },
       {
         "start": "2026-11-22",
-        "count": 110
+        "count": 150
       }
     ]
   },
   "public": {
-    "repos": 55,
+    "repos": 56,
     "stars": 176,
     "recent": [
+      {
+        "name": "agent-instructions-map",
+        "description": "See what Claude Code loads as instructions in every folder: CLAUDE.md, AGENTS.md, rules, imports, memory, skills, with token estimates.",
+        "url": "https://github.com/lnmunhoz/agent-instructions-map",
+        "stars": 0,
+        "pushedAt": "2026-11-24T08:10:29Z",
+        "language": "HTML"
+      },
       {
         "name": "cello",
         "description": "Local task board for one developer and their AI coding agents",
@@ -234,14 +242,6 @@
         "stars": 0,
         "pushedAt": "2026-08-12T12:16:16Z",
         "language": "TypeScript"
-      },
-      {
-        "name": "mongocop",
-        "description": "Interactive CLI tool for copying MongoDB databases.",
-        "url": "https://github.com/lnmunhoz/mongocop",
-        "stars": 1,
-        "pushedAt": "2026-07-02T11:07:13Z",
-        "language": "TypeScript"
       }
     ],
     "mostStarred": [
@@ -267,8 +267,8 @@
   },
   "activity": {
     "since": "2026-05-31T00:00:00Z",
-    "commits": 2667,
-    "repos": 33,
+    "commits": 2708,
+    "repos": 34,
     "privateRepos": 22,
     "hours": [
       225,
@@ -279,15 +279,15 @@
       1,
       27,
       44,
-      80,
-      70,
-      96,
-      224,
-      230,
+      81,
+      71,
+      100,
+      244,
+      234,
       168,
-      184,
-      152,
-      162,
+      186,
+      158,
+      165,
       117,
       127,
       125,
@@ -298,7 +298,7 @@
     ],
     "weekdays": [
       590,
-      363,
+      404,
       389,
       354,
       252,
@@ -308,31 +308,31 @@
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5606078426046295
+        "share": 0.5535594541394767
       },
       {
         "name": "Python",
-        "share": 0.183289988046346
+        "share": 0.19519960286274385
       },
       {
         "name": "Shell",
-        "share": 0.087688156084957
+        "share": 0.08474912911407342
       },
       {
         "name": "JavaScript",
-        "share": 0.07033906443833594
+        "share": 0.0694729408694613
       },
       {
         "name": "Swift",
-        "share": 0.038466172142500164
+        "share": 0.03845225556999418
       },
       {
         "name": "HTML",
-        "share": 0.02879514661376438
+        "share": 0.028708389562729926
       },
       {
         "name": "Other",
-        "share": 0.03081363006946671
+        "share": 0.02985822788152055
       }
     ]
   }
