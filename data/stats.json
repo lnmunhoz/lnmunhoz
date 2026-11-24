@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T10:09:34.442Z",
+  "generatedAt": "2026-11-24T22:38:48.096Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,16 +60,16 @@
     },
     {
       "year": 2026,
-      "total": 4093
+      "total": 4110
     }
   ],
   "lifetime": {
-    "total": 14140,
-    "activeDays": 1934,
+    "total": 14157,
+    "activeDays": 1935,
     "longestStreak": {
-      "length": 36,
+      "length": 37,
       "start": "2026-10-20",
-      "end": "2026-11-24"
+      "end": "2026-11-25"
     },
     "busiestDay": {
       "date": "2026-11-15",
@@ -78,14 +78,14 @@
   },
   "recent": {
     "since": "2026-05-31T00:00:00Z",
-    "total": 3238,
-    "activeDays": 120,
+    "total": 3255,
+    "activeDays": 121,
     "streak": {
-      "current": 36,
+      "current": 37,
       "longest": {
-        "length": 36,
+        "length": 37,
         "start": "2026-10-20",
-        "end": "2026-11-24"
+        "end": "2026-11-25"
       }
     },
     "busiestDay": {
@@ -195,7 +195,7 @@
       },
       {
         "start": "2026-11-22",
-        "count": 150
+        "count": 167
       }
     ]
   },
@@ -267,12 +267,12 @@
   },
   "activity": {
     "since": "2026-05-31T00:00:00Z",
-    "commits": 2708,
+    "commits": 2725,
     "repos": 34,
     "privateRepos": 22,
     "hours": [
-      225,
-      101,
+      228,
+      103,
       29,
       3,
       1,
@@ -288,18 +288,18 @@
       186,
       158,
       165,
-      117,
-      127,
-      125,
+      118,
+      129,
+      126,
       83,
       121,
-      159,
-      138
+      162,
+      143
     ],
     "weekdays": [
       590,
-      404,
-      389,
+      416,
+      394,
       354,
       252,
       306,
@@ -308,31 +308,31 @@
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5535594541394767
+        "share": 0.5376379792310673
       },
       {
         "name": "Python",
-        "share": 0.19519960286274385
+        "share": 0.17931832316345292
       },
       {
         "name": "Shell",
-        "share": 0.08474912911407342
+        "share": 0.08439780289548031
       },
       {
         "name": "JavaScript",
-        "share": 0.0694729408694613
-      },
-      {
-        "name": "Swift",
-        "share": 0.03845225556999418
+        "share": 0.07007830518163058
       },
       {
         "name": "HTML",
-        "share": 0.028708389562729926
+        "share": 0.06376507689722266
+      },
+      {
+        "name": "Swift",
+        "share": 0.03844800171137838
       },
       {
         "name": "Other",
-        "share": 0.02985822788152055
+        "share": 0.02635451091976786
       }
     ]
   }
