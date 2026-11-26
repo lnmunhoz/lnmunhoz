@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T08:40:49.280Z",
+  "generatedAt": "2026-11-26T21:45:57.680Z",
   "timeZone": "Asia/Bangkok",
   "login": "lnmunhoz",
   "name": "Lucas N. Munhoz",
@@ -60,16 +60,16 @@
     },
     {
       "year": 2026,
-      "total": 4165
+      "total": 4191
     }
   ],
   "lifetime": {
-    "total": 14212,
-    "activeDays": 1936,
+    "total": 14238,
+    "activeDays": 1937,
     "longestStreak": {
-      "length": 38,
+      "length": 39,
       "start": "2026-10-20",
-      "end": "2026-11-26"
+      "end": "2026-11-27"
     },
     "busiestDay": {
       "date": "2026-11-15",
@@ -78,14 +78,14 @@
   },
   "recent": {
     "since": "2026-05-31T00:00:00Z",
-    "total": 3310,
-    "activeDays": 122,
+    "total": 3336,
+    "activeDays": 123,
     "streak": {
-      "current": 38,
+      "current": 39,
       "longest": {
-        "length": 38,
+        "length": 39,
         "start": "2026-10-20",
-        "end": "2026-11-26"
+        "end": "2026-11-27"
       }
     },
     "busiestDay": {
@@ -195,7 +195,7 @@
       },
       {
         "start": "2026-11-22",
-        "count": 222
+        "count": 248
       }
     ]
   },
@@ -204,19 +204,19 @@
     "stars": 176,
     "recent": [
       {
-        "name": "arena-matchup",
-        "description": "Pick an LLM by job: LMArena ranks for every leaderboard, with list prices, in one HTML page",
-        "url": "https://github.com/lnmunhoz/arena-matchup",
-        "stars": 0,
-        "pushedAt": "2026-11-26T08:36:05Z",
-        "language": "HTML"
-      },
-      {
         "name": "agent-instructions-map",
         "description": "See what Claude Code loads as instructions in every folder: CLAUDE.md, AGENTS.md, rules, imports, memory, skills, with token estimates.",
         "url": "https://github.com/lnmunhoz/agent-instructions-map",
         "stars": 0,
-        "pushedAt": "2026-11-24T08:10:29Z",
+        "pushedAt": "2026-11-26T16:04:30Z",
+        "language": "HTML"
+      },
+      {
+        "name": "arena-matchup",
+        "description": "Pick an LLM by job: LMArena ranks for every leaderboard, with list prices, in one HTML page",
+        "url": "https://github.com/lnmunhoz/arena-matchup",
+        "stars": 0,
+        "pushedAt": "2026-11-26T15:39:03Z",
         "language": "HTML"
       },
       {
@@ -267,12 +267,12 @@
   },
   "activity": {
     "since": "2026-05-31T00:00:00Z",
-    "commits": 2776,
+    "commits": 2802,
     "repos": 35,
     "privateRepos": 22,
     "hours": [
-      232,
-      104,
+      238,
+      105,
       29,
       3,
       1,
@@ -288,51 +288,51 @@
       187,
       163,
       167,
-      122,
-      131,
-      127,
+      125,
+      132,
+      128,
       83,
-      121,
-      162,
-      143
+      122,
+      169,
+      149
     ],
     "weekdays": [
       590,
       416,
       428,
-      371,
-      252,
+      390,
+      259,
       306,
       413
     ],
     "languages": [
       {
         "name": "TypeScript",
-        "share": 0.5322122344203618
+        "share": 0.5272007318252199
       },
       {
         "name": "Python",
-        "share": 0.1870665818873297
-      },
-      {
-        "name": "Shell",
-        "share": 0.08391932446764962
+        "share": 0.20167103160425331
       },
       {
         "name": "JavaScript",
-        "share": 0.07002443204181125
+        "share": 0.09100351942669656
       },
       {
         "name": "HTML",
-        "share": 0.06322639799756616
+        "share": 0.06523926210974712
+      },
+      {
+        "name": "Shell",
+        "share": 0.05410260123798979
       },
       {
         "name": "Swift",
-        "share": 0.038098146530652015
+        "share": 0.03774387192056727
       },
       {
         "name": "Other",
-        "share": 0.02545288265462957
+        "share": 0.023038981875526224
       }
     ]
   }
